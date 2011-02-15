@@ -17,7 +17,7 @@
 
 // --------------------------------------------------
 
-+ (AKURLRequest *)requestWithURL:(NSString *)URL delegate:(id <XURLRequestDelegate>)delegate {
++ (AKURLRequest *)requestWithURL:(NSString *)URL delegate:(id <AKURLRequestDelegate>)delegate {
     AKURLRequest *request = [[[self alloc] init] autorelease];
     request.URL = URL;
     request.delegate = delegate;

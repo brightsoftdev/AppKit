@@ -6,22 +6,33 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "TableViewController1.h"
+#import "MenuController.h"
+#import "NetworkController.h"
 
+@implementation MenuController
 
-@implementation TableViewController1
+#pragma mark -
+#pragma mark actions
 
 - (void)nextAction:(id)sender {
     [[self class] push];
+}
+
+- (void)networkAction:(id)sender {
+    [NetworkController push];
 }
 
 - (void)objectAction:(AKTableTextObject *)tableObject {
 	[UIAlertView showAlertWithMessage:@"You tapped me !"];
 }
 
+
+#pragma mark -
+#pragma mark controller
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nil bundle:nil]) {
-		self.title = @"Table Sample";
+		self.title = @"Sample App";
 		self.style = UITableViewStyleGrouped;
 
     }
@@ -32,6 +43,7 @@
     AKTableViewGenericDataSource *dataSource = self.dataSource;
 
     dataSource.sectionTitles = [NSArray arrayWithObjects:
+                                @"Network",
                                 @"Some section title",
                                 nil];
 
@@ -42,6 +54,10 @@
                                  nil];
 
     dataSource.items = [NSArray arrayWithObjects:
+
+                        [NSArray arrayWithObjects:
+                         [AKTableTextObject itemWithText:@"Network Controller" delegate:self selector:@selector(networkAction:)],
+                         nil],
 
                         [AKTableTextObject itemWithText:@"Tap me" delegate:self selector:@selector(objectAction:)],
 

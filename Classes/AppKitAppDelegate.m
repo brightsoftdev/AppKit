@@ -8,7 +8,7 @@
 
 #import "AppKitAppDelegate.h"
 
-#import "TableViewController1.h"
+#import "MenuController.h"
 #import "TestController2.h"
 
 @implementation AppKitAppDelegate
@@ -25,7 +25,7 @@
 	[self.window makeKeyAndVisible];
 */
     
-    [TableViewController1 push];
+    [MenuController push];
 
     return YES;
 }

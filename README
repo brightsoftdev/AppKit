@@ -1,4 +1,9 @@
 AppKit
 A simple framework for creating iOS (iPhone) Apps.
+Designed with MVC pattern in mind, and *Heavily* influenced by Three20. Use Three20 for a more mature framework.
 
 Current status is Alpha, completely unstable. Do not use for production.
+
+- uses the JSON-Framework for JSON parsing.
+https://github.com/stig/json-framework
+

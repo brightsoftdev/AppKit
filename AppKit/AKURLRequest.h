@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class AKURLRequest;
-@protocol XURLRequestDelegate <NSObject>
+@protocol AKURLRequestDelegate <NSObject>
 @optional
 - (void)requestDidStartLoad:(AKURLRequest *)request;
 - (void)requestDidFinishLoading:(AKURLRequest *)request;
@@ -19,17 +19,17 @@
 
 @interface AKURLRequest : NSObject {
     NSString *_URL;
-    id <XURLRequestDelegate> _delegate;
+    id <AKURLRequestDelegate> _delegate;
     NSURLRequest *_request;
     NSURLConnection *_connection;
     NSMutableData *_data;
 }
 
 @property (nonatomic, copy) NSString *URL;
-@property (nonatomic, assign) id <XURLRequestDelegate> delegate;
+@property (nonatomic, assign) id <AKURLRequestDelegate> delegate;
 @property (nonatomic, readonly) NSMutableData *data;
 
-+ (AKURLRequest *)requestWithURL:(NSString *)URL delegate:(id<XURLRequestDelegate>)delegate;
++ (AKURLRequest *)requestWithURL:(NSString *)URL delegate:(id<AKURLRequestDelegate>)delegate;
 - (void)start;
 
 @end

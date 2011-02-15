@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TableViewController1 : AKTableViewController <UITextFieldDelegate> {
+@interface MenuController : AKTableViewController <UITextFieldDelegate> {
 
 }
 

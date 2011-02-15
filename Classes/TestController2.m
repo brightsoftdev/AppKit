@@ -7,14 +7,14 @@
 //
 
 #import "TestController2.h"
-#import "TableViewController1.h"
+#import "MenuController.h"
 
 @implementation TestController2
 
 - (void)nextAction:(id)sender {
     //[TestController2 push];
     //[[[[TestController2 alloc] initWithNibName:nil bundle:nil] autorelease] push];
-    TableViewController1 *tableViewController = [[[TableViewController1 alloc] initWithNibName:nil bundle:nil] autorelease];
+    MenuController *tableViewController = [[[MenuController alloc] initWithNibName:nil bundle:nil] autorelease];
     [[AKNavigationController shared] pushViewController:tableViewController animated:YES];
 
     //[[[[TestController2 alloc] initWithTitle:[NSString stringWithFormat:@"R : %d", arc4random()]] autorelease] push];
