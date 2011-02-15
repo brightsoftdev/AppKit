@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface AKNavigationController : UINavigationController {
-
+    UIWindow *_window;
 }
+
+@property (nonatomic, readonly) UIWindow *window;
 
 + (AKNavigationController *)shared;
 

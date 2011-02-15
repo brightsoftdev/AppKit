@@ -12,16 +12,17 @@
 @end
 
 @interface UIView (Additions)
-
-
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
-
 @property (nonatomic, assign) CGPoint origin;
-
 @end
+
+@interface UIViewController (Additions)
++ (UIViewController *)push;
+@end
+
 
 @interface UITextField (Additions)
 + (Class)cellClass;

@@ -17,5 +17,6 @@
 @property (nonatomic, copy) NSString *text;
 
 + (id)itemWithText:(NSString *)text;
++ (id)itemWithText:(NSString *)text delegate:(id)delegate selector:(SEL)selector;
 
 @end

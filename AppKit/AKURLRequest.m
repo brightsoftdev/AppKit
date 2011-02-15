@@ -7,7 +7,7 @@
 //
 
 #import "AKURLRequest.h"
-#import "XGlobalNetwork.h"
+#import "AKGlobalNetwork.h"
 #import "Global.h"
 
 @implementation AKURLRequest

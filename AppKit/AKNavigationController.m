@@ -10,6 +10,7 @@
 #import "AKNavigationController.h"
 
 @implementation AKNavigationController
+@synthesize window = _window;
 
 + (AKNavigationController *) shared{
     static AKNavigationController *instance = NULL;
@@ -20,6 +21,15 @@
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+
+    /*
+     * If no window, create.
+     */
+    if (!_window) {
+        [self.window addSubview:self.view];
+        [self.window makeKeyAndVisible];
+    }
+
     if (animated) {
         //self.view.y = self.view.frame.size.height;
         /*
@@ -38,34 +48,19 @@
     }
 
 }
-/*
- [UIView beginAnimations:nil context:NULL];
- [UIView setAnimationDuration: 0.50];
- 
- 
- [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:YES];
- 
- //Create ViewController
- MyViewController *myVC = [[MyViewController alloc] initWith...];
- 
- [self.navigationController pushViewController:myVC animated:NO];
- [myVC release];
- 
- //Start Animation
- [UIView commitAnimations];
- */
 
-/*
- 
- - (UINavigationController *)navigationController {
- if (!_navigationController) {
- TestController1 *controller = [[[TestController1 alloc] init] autorelease];
- _navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
- 
- }
- return _navigationController;
- }
- 
- */
+#pragma mark -
+#pragma mark lazy
+
+- (UIWindow *)window {
+	if (!_window) {
+		_window = [[UIWindow alloc] initWithFrame:AKScreenBounds()];
+		_window.backgroundColor = [UIColor blackColor];
+		//_window.layer.borderColor = [UIColor blueColor].CGColor;
+		//_window.layer.borderWidth = 2.0;
+	}
+	return _window;
+}
+
 
 @end

@@ -20,8 +20,19 @@
 
 + (id)itemWithText:(NSString *)text {
 	AKTableTextObject *object = [[[[self class] alloc] init] autorelease];
-	object.text = text;
+	if (object) {
+        object.text = text;
+    }
 	return object;
+}
+
++  (id)itemWithText:(NSString *)text delegate:(id)delegate selector:(SEL)selector {
+    AKTableTextObject *object = [self itemWithText:text];
+    if (object) {
+        object.delegate = delegate;
+        object.selector = selector;
+    }
+    return object;
 }
 
 - (void)dealloc {

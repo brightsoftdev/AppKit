@@ -11,8 +11,8 @@
 @interface AKBaseViewController : UIViewController {
 
 }
-
+/*
 + (AKBaseViewController *)push;
 - (AKBaseViewController *)push;
-
+*/
 @end

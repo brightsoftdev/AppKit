@@ -13,7 +13,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		6835634612F3E9AF0025F818 /* libAppKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 683562F512F3E6060025F818 /* libAppKit.a */; };
-		6835636D12F3EB190025F818 /* TestController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6835636C12F3EB190025F818 /* TestController1.m */; };
+		6835636D12F3EB190025F818 /* TableViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6835636C12F3EB190025F818 /* TableViewController1.m */; };
 		6857F9B11303AC04004B6549 /* TestController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857F9B01303AC04004B6549 /* TestController2.m */; };
 		68631054130A3B1C00283F99 /* AppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631053130A3B1C00283F99 /* AppKit.h */; };
 		68631059130A3B2600283F99 /* Global.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631057130A3B2600283F99 /* Global.h */; };
@@ -76,8 +76,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* AppKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppKit_Prefix.pch; sourceTree = "<group>"; };
 		683562F512F3E6060025F818 /* libAppKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6835636B12F3EB190025F818 /* TestController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestController1.h; sourceTree = "<group>"; };
-		6835636C12F3EB190025F818 /* TestController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestController1.m; sourceTree = "<group>"; };
+		6835636B12F3EB190025F818 /* TableViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController1.h; sourceTree = "<group>"; };
+		6835636C12F3EB190025F818 /* TableViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController1.m; sourceTree = "<group>"; };
 		6857F9AF1303AC04004B6549 /* TestController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestController2.h; sourceTree = "<group>"; };
 		6857F9B01303AC04004B6549 /* TestController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestController2.m; sourceTree = "<group>"; };
 		68631053130A3B1C00283F99 /* AppKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppKit.h; path = AppKit/AppKit.h; sourceTree = SOURCE_ROOT; };
@@ -224,8 +224,8 @@
 		6857F9AD1303ABD2004B6549 /* TestController1 */ = {
 			isa = PBXGroup;
 			children = (
-				6835636B12F3EB190025F818 /* TestController1.h */,
-				6835636C12F3EB190025F818 /* TestController1.m */,
+				6835636B12F3EB190025F818 /* TableViewController1.h */,
+				6835636C12F3EB190025F818 /* TableViewController1.m */,
 			);
 			name = TestController1;
 			sourceTree = "<group>";
@@ -467,7 +467,7 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppKitAppDelegate.m in Sources */,
-				6835636D12F3EB190025F818 /* TestController1.m in Sources */,
+				6835636D12F3EB190025F818 /* TableViewController1.m in Sources */,
 				6857F9B11303AC04004B6549 /* TestController2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

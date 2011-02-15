@@ -68,6 +68,16 @@ CGRect XRectMakeWithPointSize() {
 
 @end
 
+@implementation UIViewController (Additions)
++ (UIViewController *)push {
+    AKBaseViewController *controller = [[self alloc] initWithNibName:nil bundle:nil];
+    [[AKNavigationController shared] pushViewController:controller animated:YES];
+    
+    return controller;
+}
+@end
+
+
 @implementation UITextField (Additions)
 + (Class)cellClass {
 	return [AKTableViewControlCell class];
@@ -77,7 +87,7 @@ CGRect XRectMakeWithPointSize() {
 @implementation UIAlertView (Additions)
 
 + (UIAlertView *)alertWithMessage:(NSString *)message {
-	UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:BundleDisplayName()
+	UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:AKBundleDisplayName()
 														 message:message
 														delegate:nil
 											   cancelButtonTitle:nil

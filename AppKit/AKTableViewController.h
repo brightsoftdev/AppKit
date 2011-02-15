@@ -8,13 +8,20 @@
 
 #import "AppKit.h"
 #import "AKBaseViewController.h"
+//#import <UIKit/UIKit.h>
 
 @interface AKTableViewController : UITableViewController {
 	UITableViewStyle _style;
 	//UITableView *_tableView;
+
+    id <UITableViewDataSource> _dataSource;
+    id <UITableViewDelegate> _delegate;
 }
 
 @property (nonatomic, assign) UITableViewStyle style;
+@property (nonatomic, retain) id <UITableViewDataSource> dataSource;
+@property (nonatomic, retain) id <UITableViewDelegate> delegate;
+
 //@property (nonatomic, readonly) UITableView *tableView;
 
 @end

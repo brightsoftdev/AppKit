@@ -11,14 +11,14 @@
 
 #define RELEASE(__POINTER) { [__POINTER release]; __POINTER = nil; }
 
-static inline CGRect ScreenBounds() {
+static inline CGRect AKScreenBounds() {
 	return [UIScreen mainScreen].bounds;
 }
 
-static inline CGRect ApplicationFrame() {
+static inline CGRect AKApplicationFrame() {
 	return [UIScreen mainScreen].applicationFrame;
 }
 
-static inline NSString *BundleDisplayName() {
+static inline NSString *AKBundleDisplayName() {
     return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
 }

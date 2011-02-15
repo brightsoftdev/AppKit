@@ -12,6 +12,14 @@
 
 @implementation AKTableViewDelegate
 
+- (id)init {
+    if (self = [super init]) {
+        //
+        NSLog(@"delegate init");
+    }
+    return self;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 	AKTableViewDataSource *dataSource = tableView.dataSource;

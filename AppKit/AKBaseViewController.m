@@ -13,7 +13,7 @@
 #import "AKNavigationController.h"
 
 @implementation AKBaseViewController
-
+/*
 + (AKBaseViewController *)push {
     AKBaseViewController *controller = [[self alloc] initWithNibName:nil bundle:nil];
     [[AKNavigationController shared] pushViewController:controller animated:YES];
@@ -25,7 +25,7 @@
     [[AKNavigationController shared] pushViewController:self animated:YES];
     return self;
 }
-
+*/
 - (id)init {
 	if (self = [self initWithNibName:nil bundle:nil]) {
 

@@ -8,33 +8,24 @@
 
 #import "AppKitAppDelegate.h"
 
-#import "TestController1.h"
+#import "TableViewController1.h"
 #import "TestController2.h"
 
 @implementation AppKitAppDelegate
-@synthesize window = _window;
-//@synthesize navigationController = _navigationController;
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
-    // Override point for customization after application 
 
+    // Override point for customization after application 
+/*
 	[self.window addSubview:[AKNavigationController shared].view];
 	//self.navigationController.view.frame = self.window.frame;
 	[self.window makeKeyAndVisible];
-
+*/
     
-    AKBaseViewController *controller = [[[TestController2 alloc] initWithNibName:nil bundle:nil] autorelease];
-    [[AKNavigationController shared] pushViewController:controller animated:YES];
-
-
-	//application.statusBarStyle = UIStatusBarStyleBlackTranslucent;
-
-	//application.statusBarHidden = YES;
-	//application.statusBarHidden = YES;
+    [TableViewController1 push];
 
     return YES;
 }
@@ -89,7 +80,7 @@
 
 
 - (void)dealloc {
-	RELEASE(_window);
+	//RELEASE(_window);
 	//RELEASE(_navigationController);
     [super dealloc];
 }
@@ -97,17 +88,17 @@
 
 #pragma mark -
 #pragma mark lazy
-
+/*
 - (UIWindow *)window {
 	if (!_window) {
-		_window = [[UIWindow alloc] initWithFrame:ScreenBounds()];
+		_window = [[UIWindow alloc] initWithFrame:AKScreenBounds()];
 		_window.backgroundColor = [UIColor blackColor];
 		//_window.layer.borderColor = [UIColor blueColor].CGColor;
 		//_window.layer.borderWidth = 2.0;
-
 	}
 	return _window;
 }
+*/
 /*
 - (UINavigationController *)navigationController {
 	if (!_navigationController) {
