@@ -19,9 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
-    NSArray *objects = [NSArray arrayWithObjects:@"Alpha", @"Beta", @"Omega", nil];
-    [objects test];
-    //[TwitterController push];
+    [TwitterController push];
 
     return YES;
 }

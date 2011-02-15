@@ -7,7 +7,7 @@
 //
 
 #import "PublicTimelineModel.h"
-
+#import "TweetObject.h"
 
 @implementation PublicTimelineModel
 @synthesize tweets = _tweets;
@@ -25,7 +25,38 @@
 }
 
 - (void)load {
-    //
+    [super load];
+
+    AKURLRequest *request = [AKURLRequest requestWithURL:@"http://api.twitter.com/1/statuses/public_timeline.json"
+                                                delegate:self];
+    [request start];
+
+//    [self didFinishLoad];
+}
+
+- (void)requestDidFinishLoading:(AKURLRequest *)request {
+    NSString *responseString = [[[NSString alloc] initWithData:request.data encoding:NSUTF8StringEncoding] autorelease];
+    id JSONObject = [responseString JSONValue];
+    
+    if ([JSONObject isKindOfClass:[NSArray class]]) {
+
+        [_tweets removeAllObjects];
+
+        NSArray *items = JSONObject;
+        for (id object in items) {
+            if ([object isKindOfClass:[NSDictionary class]]) {
+                NSDictionary *item = object;
+                
+                TweetObject *tweet = [[[TweetObject alloc] init] autorelease];
+                tweet.text = [item objectForKey:@"text"];
+                [_tweets addObject:tweet];
+
+            }
+            
+        }
+    }
+    
+    [self didFinishLoad];
 }
 
 @end

@@ -18,6 +18,9 @@
 // Navigation
 #import "AKNavigationController.h"
 
+// Model
+#import "AKModel.h"
+#import "AKRequestModel.h"
 
 // Network
 #import "AKURLRequest.h"

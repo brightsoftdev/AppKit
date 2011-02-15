@@ -6,7 +6,7 @@
 //  Copyright 2011 netsystems. All rights reserved.
 //
 
-@interface PublicTimelineModel : NSObject {
+@interface PublicTimelineModel : AKModel <AKURLRequestDelegate> {
     NSMutableArray *_tweets;
 }
 

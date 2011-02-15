@@ -52,16 +52,22 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return _items.count;
+	if (_items) {
+        return _items.count;
+    }
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	id object = [_items objectAtIndex:section];
-	if ([object isKindOfClass:[NSArray class]]) {
-		return [(NSArray *)object count];
-	} else {
-		return 1;
-	}
+    if (_items) {
+        id object = [_items objectAtIndex:section];
+        if ([object isKindOfClass:[NSArray class]]) {
+            return [(NSArray *)object count];
+        } else {
+            return 1;
+        }
+    }
+    return 0;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {

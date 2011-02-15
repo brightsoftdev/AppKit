@@ -46,6 +46,7 @@
 		685F5740130A8FA000AE3D4E /* AKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 685F573E130A8FA000AE3D4E /* AKModel.m */; };
 		685F574D130A911F00AE3D4E /* AKRequestModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 685F574B130A911F00AE3D4E /* AKRequestModel.h */; };
 		685F574E130A911F00AE3D4E /* AKRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 685F574C130A911F00AE3D4E /* AKRequestModel.m */; };
+		685F581E130AA50F00AE3D4E /* TimelineDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 685F581D130AA50F00AE3D4E /* TimelineDataSource.m */; };
 		68631054130A3B1C00283F99 /* AppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631053130A3B1C00283F99 /* AppKit.h */; };
 		68631059130A3B2600283F99 /* Global.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631057130A3B2600283F99 /* Global.h */; };
 		6863105A130A3B2600283F99 /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631058130A3B2600283F99 /* Global.m */; };
@@ -146,6 +147,8 @@
 		685F573E130A8FA000AE3D4E /* AKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKModel.m; path = AppKit/AKModel.m; sourceTree = SOURCE_ROOT; };
 		685F574B130A911F00AE3D4E /* AKRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKRequestModel.h; path = AppKit/AKRequestModel.h; sourceTree = SOURCE_ROOT; };
 		685F574C130A911F00AE3D4E /* AKRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKRequestModel.m; path = AppKit/AKRequestModel.m; sourceTree = SOURCE_ROOT; };
+		685F581C130AA50F00AE3D4E /* TimelineDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineDataSource.h; sourceTree = "<group>"; };
+		685F581D130AA50F00AE3D4E /* TimelineDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineDataSource.m; sourceTree = "<group>"; };
 		68631053130A3B1C00283F99 /* AppKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppKit.h; path = AppKit/AppKit.h; sourceTree = SOURCE_ROOT; };
 		68631057130A3B2600283F99 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Global.h; path = AppKit/Global.h; sourceTree = SOURCE_ROOT; };
 		68631058130A3B2600283F99 /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Global.m; path = AppKit/Global.m; sourceTree = SOURCE_ROOT; };
@@ -358,6 +361,7 @@
 		685F555D130A75EB00AE3D4E /* TwitterController */ = {
 			isa = PBXGroup;
 			children = (
+				685F581B130AA4F000AE3D4E /* DataSource */,
 				685F5563130A761200AE3D4E /* Model */,
 				685F555E130A760000AE3D4E /* TwitterController.h */,
 				685F555F130A760000AE3D4E /* TwitterController.m */,
@@ -368,9 +372,9 @@
 		685F5563130A761200AE3D4E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				685F570F130A8D7C00AE3D4E /* Object */,
 				685F5564130A762200AE3D4E /* PublicTimelineModel.h */,
 				685F5565130A762200AE3D4E /* PublicTimelineModel.m */,
+				685F570F130A8D7C00AE3D4E /* Object */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -404,6 +408,15 @@
 				685F574C130A911F00AE3D4E /* AKRequestModel.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		685F581B130AA4F000AE3D4E /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				685F581C130AA50F00AE3D4E /* TimelineDataSource.h */,
+				685F581D130AA50F00AE3D4E /* TimelineDataSource.m */,
+			);
+			name = DataSource;
 			sourceTree = "<group>";
 		};
 		6874E932130A45B300A793A2 /* TableViewController */ = {
@@ -645,6 +658,7 @@
 				685F5560130A760000AE3D4E /* TwitterController.m in Sources */,
 				685F5566130A762200AE3D4E /* PublicTimelineModel.m in Sources */,
 				685F5712130A8D8B00AE3D4E /* TweetObject.m in Sources */,
+				685F581E130AA50F00AE3D4E /* TimelineDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

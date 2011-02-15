@@ -9,10 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AKBaseViewController : UIViewController {
-
+    UIView *_overlayView;
 }
-/*
-+ (AKBaseViewController *)push;
-- (AKBaseViewController *)push;
-*/
+
+@property (nonatomic, retain) UIView *overlayView;
+
 @end

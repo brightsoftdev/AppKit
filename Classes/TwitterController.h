@@ -6,8 +6,10 @@
 //  Copyright 2011 netsystems. All rights reserved.
 //
 
-@interface TwitterController : AKTableViewController {
+#include "PublicTimelineModel.h"
 
+@interface TwitterController : AKTableViewController <AKModelProtocol> {
+    PublicTimelineModel *_model;
 }
 
 @end

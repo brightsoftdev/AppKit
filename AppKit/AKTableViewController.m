@@ -13,7 +13,7 @@
 @synthesize style = _style;
 @synthesize dataSource = _dataSource;
 @synthesize delegate = _delegate;
-//@synthesize tableView = _tableView;
+@synthesize tableView = _tableView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
@@ -25,13 +25,14 @@
 }
 
 - (void)dealloc {
-    RELEASE(_dataSource);
-    RELEASE(_delegate);
+    RELEASE(_tableView)
+    RELEASE(_dataSource)
+    RELEASE(_delegate)
 	[super dealloc];
 }
 
 - (void)setDataSource:(id <UITableViewDataSource>)value {
-    self.tableView.dataSource = value;
+    /*if (_tableView) */self.tableView.dataSource = value;
     [_dataSource release];
     _dataSource = [value retain];
 }
@@ -44,9 +45,22 @@
 
 - (void)loadView {
 	[super loadView];
-	self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:_style];
+
     self.delegate = [[[AKTableViewDelegate alloc] init] autorelease];
-    self.dataSource = [[[AKTableViewGenericDataSource alloc] init] autorelease];
+    //self.dataSource = [[[AKTableViewGenericDataSource alloc] init] autorelease];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.tableView.frame = self.view.frame;
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:_style];
+        [self.view addSubview:_tableView];
+    }
+    return _tableView;
 }
 
 @end

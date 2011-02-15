@@ -11,6 +11,7 @@
 #import "Additions.h"
 
 @implementation AKModel
+@synthesize delegates = _delegates;
 
 - (id)init {
     if (self = [super init]) {
@@ -22,6 +23,14 @@
 - (void)dealloc {
     RELEASE(_delegates)
     [super dealloc];
+}
+
+- (void)load {
+
+}
+
+- (void)save {
+
 }
 
 - (void)didStartLoad {

@@ -10,6 +10,7 @@
 
 @class AKModel;
 @protocol AKModelProtocol <NSObject>
+@optional
 - (void)modelDidStartLoad:(AKModel *)model;
 - (void)modelDidFinishLoad:(AKModel *)model;
 - (void)modelDidFailLoadWithError:(NSError*)error;
@@ -20,7 +21,18 @@
  * A Model is a simple object that holds data.
  */
 @interface AKModel : NSObject {
+    BOOL _modified;
     NSMutableSet *_delegates;
 }
+
+@property (nonatomic, readonly) NSMutableSet *delegates;
+
+- (void)load;
+- (void)save;
+
+- (void)didStartLoad;
+- (void)didFinishLoad;
+- (void)didFailLoadWithError;
+- (void)didChange;
 
 @end
