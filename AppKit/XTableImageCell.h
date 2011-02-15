@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XImageView.h"
+#import "AKImageView.h"
 #import "XTableTextCell.h"
 
 @interface XTableImageCell : XTableTextCell {
-    XImageView *_imageView2;
+    AKImageView *_imageView2;
 }
 
-@property (nonatomic, readonly) XImageView *imageView2;
+@property (nonatomic, readonly) AKImageView *imageView2;
 
 @end

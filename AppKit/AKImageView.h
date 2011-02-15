@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "XURLRequest.h"
 
-@interface XImageView : UIView <XURLRequestDelegate> {
+@interface AKImageView : UIView <XURLRequestDelegate> {
     UIActivityIndicatorView *_activityIndicatorView;
     UIImageView *_defaultImageView;
     UIImageView *_imageView;

@@ -6,10 +6,10 @@
 //  Copyright 2011 netsystems. All rights reserved.
 //
 
-#import "XImageView.h"
+#import "AKImageView.h"
 #import "Global.h"
 
-@implementation XImageView
+@implementation AKImageView
 @synthesize imageURL = _imageURL;
 //@synthesize defaultImage = _defaultImage;
 

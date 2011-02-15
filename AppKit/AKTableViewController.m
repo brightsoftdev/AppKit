@@ -7,7 +7,7 @@
 //
 
 #import "AKTableViewController.h"
-#import "XTableViewDataSource.h"
+#import "AKTableViewDataSource.h"
 
 @implementation AKTableViewController
 @synthesize style = _style;

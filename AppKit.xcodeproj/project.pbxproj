@@ -20,8 +20,8 @@
 		6863105A130A3B2600283F99 /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631058130A3B2600283F99 /* Global.m */; };
 		6863105D130A3B2E00283F99 /* Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6863105B130A3B2E00283F99 /* Additions.h */; };
 		6863105E130A3B2E00283F99 /* Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6863105C130A3B2E00283F99 /* Additions.m */; };
-		68631063130A3B4400283F99 /* XImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631061130A3B4400283F99 /* XImageView.h */; };
-		68631064130A3B4400283F99 /* XImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631062130A3B4400283F99 /* XImageView.m */; };
+		68631063130A3B4400283F99 /* AKImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631061130A3B4400283F99 /* AKImageView.h */; };
+		68631064130A3B4400283F99 /* AKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631062130A3B4400283F99 /* AKImageView.m */; };
 		68631067130A3B4E00283F99 /* AKBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631065130A3B4E00283F99 /* AKBaseViewController.h */; };
 		68631068130A3B4E00283F99 /* AKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631066130A3B4E00283F99 /* AKBaseViewController.m */; };
 		6863106B130A3B6500283F99 /* AKTableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631069130A3B6500283F99 /* AKTableViewDataSource.h */; };
@@ -85,8 +85,8 @@
 		68631058130A3B2600283F99 /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Global.m; path = AppKit/Global.m; sourceTree = SOURCE_ROOT; };
 		6863105B130A3B2E00283F99 /* Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Additions.h; path = AppKit/Additions.h; sourceTree = SOURCE_ROOT; };
 		6863105C130A3B2E00283F99 /* Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Additions.m; path = AppKit/Additions.m; sourceTree = SOURCE_ROOT; };
-		68631061130A3B4400283F99 /* XImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XImageView.h; path = AppKit/XImageView.h; sourceTree = SOURCE_ROOT; };
-		68631062130A3B4400283F99 /* XImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XImageView.m; path = AppKit/XImageView.m; sourceTree = SOURCE_ROOT; };
+		68631061130A3B4400283F99 /* AKImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKImageView.h; path = AppKit/AKImageView.h; sourceTree = SOURCE_ROOT; };
+		68631062130A3B4400283F99 /* AKImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKImageView.m; path = AppKit/AKImageView.m; sourceTree = SOURCE_ROOT; };
 		68631065130A3B4E00283F99 /* AKBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKBaseViewController.h; path = AppKit/AKBaseViewController.h; sourceTree = SOURCE_ROOT; };
 		68631066130A3B4E00283F99 /* AKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKBaseViewController.m; path = AppKit/AKBaseViewController.m; sourceTree = SOURCE_ROOT; };
 		68631069130A3B6500283F99 /* AKTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKTableViewDataSource.h; path = AppKit/AKTableViewDataSource.h; sourceTree = SOURCE_ROOT; };
@@ -351,8 +351,8 @@
 		68F31DD012F70473004ADFF7 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				68631061130A3B4400283F99 /* XImageView.h */,
-				68631062130A3B4400283F99 /* XImageView.m */,
+				68631061130A3B4400283F99 /* AKImageView.h */,
+				68631062130A3B4400283F99 /* AKImageView.m */,
 			);
 			name = Image;
 			sourceTree = "<group>";
@@ -367,7 +367,7 @@
 				68631054130A3B1C00283F99 /* AppKit.h in Headers */,
 				68631059130A3B2600283F99 /* Global.h in Headers */,
 				6863105D130A3B2E00283F99 /* Additions.h in Headers */,
-				68631063130A3B4400283F99 /* XImageView.h in Headers */,
+				68631063130A3B4400283F99 /* AKImageView.h in Headers */,
 				68631067130A3B4E00283F99 /* AKBaseViewController.h in Headers */,
 				6863106B130A3B6500283F99 /* AKTableViewDataSource.h in Headers */,
 				6863106F130A3B6F00283F99 /* AKTableViewArrayDataSource.h in Headers */,
@@ -478,7 +478,7 @@
 			files = (
 				6863105A130A3B2600283F99 /* Global.m in Sources */,
 				6863105E130A3B2E00283F99 /* Additions.m in Sources */,
-				68631064130A3B4400283F99 /* XImageView.m in Sources */,
+				68631064130A3B4400283F99 /* AKImageView.m in Sources */,
 				68631068130A3B4E00283F99 /* AKBaseViewController.m in Sources */,
 				6863106C130A3B6500283F99 /* AKTableViewDataSource.m in Sources */,
 				68631070130A3B6F00283F99 /* AKTableViewArrayDataSource.m in Sources */,

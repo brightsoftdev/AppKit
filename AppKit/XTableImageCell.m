@@ -33,9 +33,9 @@
     self.imageView2.frame = CGRectMake(0, 0, 50, 50);
 }
 
-- (XImageView *)imageView2 {
+- (AKImageView *)imageView2 {
     if (!_imageView2) {
-        _imageView2 = [[XImageView alloc] init];
+        _imageView2 = [[AKImageView alloc] init];
         _imageView2.defaultImage = [UIImage imageNamed:@"test"];
         [self.contentView addSubview:_imageView2];
     }

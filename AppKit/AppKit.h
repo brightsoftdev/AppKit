@@ -22,7 +22,7 @@
 // Network
 #import "XURLRequest.h"
 
-#import "XImageView.h"
+#import "AKImageView.h"
 
 // ViewController
 #import "AKBaseViewController.h"
