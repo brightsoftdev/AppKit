@@ -28,8 +28,8 @@
 		self.title = @"XController";
 		self.style = UITableViewStyleGrouped;
         
-		_dataSource = [[XTableViewGenericDataSource alloc] init];
-		_delegate = [[XTableViewDelegate alloc] init];
+		_dataSource = [[AKTableViewGenericDataSource alloc] init];
+		_delegate = [[AKTableViewDelegate alloc] init];
 		
 		UITextField *textField = [[[UITextField alloc] init] autorelease];
 		textField.returnKeyType = UIReturnKeyDone;

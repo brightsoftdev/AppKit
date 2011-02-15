@@ -27,9 +27,9 @@
 	[self.window makeKeyAndVisible];
 
     
-    XBaseViewController *controller = [[[TestController2 alloc] initWithNibName:nil bundle:nil] autorelease];
+    AKBaseViewController *controller = [[[TestController2 alloc] initWithNibName:nil bundle:nil] autorelease];
     [[XNavigationController shared] pushViewController:controller animated:YES];
-    
+
 
 	//application.statusBarStyle = UIStatusBarStyleBlackTranslucent;
 

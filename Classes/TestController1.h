@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TestController1 : XTableViewController <UITextFieldDelegate> {
-	XTableViewGenericDataSource *_dataSource;
-	XTableViewDelegate *_delegate;
+@interface TestController1 : AKTableViewController <UITextFieldDelegate> {
+	AKTableViewGenericDataSource *_dataSource;
+	AKTableViewDelegate *_delegate;
 }
 
 @end

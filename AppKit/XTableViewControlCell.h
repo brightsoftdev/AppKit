@@ -10,7 +10,7 @@
 #import "XTableTextCell.h"
 
 
-@interface XTableViewControlCell : XTableCell {
+@interface XTableViewControlCell : AKTableCell {
 
 }
 

@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XTableCell.h"
+#import "AKTableCell.h"
 
-@interface XTableTextCell : XTableCell {
+@interface XTableTextCell : AKTableCell {
 
 }
 

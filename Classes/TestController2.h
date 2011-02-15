@@ -6,7 +6,7 @@
 //  Copyright 2011 netsystems. All rights reserved.
 //
 
-@interface TestController2 : XBaseViewController {
+@interface TestController2 : AKBaseViewController {
 
 }
 

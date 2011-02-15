@@ -25,16 +25,16 @@
 #import "XImageView.h"
 
 // ViewController
-#import "XBaseViewController.h"
-#import "XTableViewController.h"
+#import "AKBaseViewController.h"
+#import "AKTableViewController.h"
 
 // TableView
-#import "XTableViewDataSource.h"
-#import "XTableViewArrayDataSource.h"
-#import "XTableViewGenericDataSource.h"
+#import "AKTableViewDataSource.h"
+#import "AKTableViewArrayDataSource.h"
+#import "AKTableViewGenericDataSource.h"
 
-#import "XTableObject.h"
-#import "XTableViewDelegate.h"
+#import "AKTableObject.h"
+#import "AKTableViewDelegate.h"
 
 #import "XTableTextObject.h"
 #import "XTableImageObject.h"

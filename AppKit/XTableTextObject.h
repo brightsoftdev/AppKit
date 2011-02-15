@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XTableObject.h"
+#import "AKTableObject.h"
 
 
-@interface XTableTextObject : XTableObject {
+@interface XTableTextObject : AKTableObject {
 	NSString *_text;
 }
 
