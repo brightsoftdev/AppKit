@@ -9,13 +9,17 @@
 #import "Additions.h"
 #import "AKTableViewControlCell.h"
 
+// --------------------------------------------------
+
+#pragma mark NSObject
+
 @implementation NSObject (Additions)
 @end
 
-/*
-CGRect XRectMakeWithPointSize() {
-	
-}*/
+// --------------------------------------------------
+
+#pragma mark -
+#pragma mark UIView
 
 @implementation UIView (Additions)
 
@@ -68,6 +72,11 @@ CGRect XRectMakeWithPointSize() {
 
 @end
 
+// --------------------------------------------------
+
+#pragma mark -
+#pragma mark UIViewController
+
 @implementation UIViewController (Additions)
 + (UIViewController *)push {
     AKBaseViewController *controller = [[self alloc] initWithNibName:nil bundle:nil];
@@ -77,12 +86,21 @@ CGRect XRectMakeWithPointSize() {
 }
 @end
 
+// --------------------------------------------------
+
+#pragma mark -
+#pragma mark UITextField
 
 @implementation UITextField (Additions)
 + (Class)cellClass {
 	return [AKTableViewControlCell class];
 }
 @end
+
+// --------------------------------------------------
+
+#pragma mark -
+#pragma mark UIAlertView
 
 @implementation UIAlertView (Additions)
 
@@ -103,3 +121,30 @@ CGRect XRectMakeWithPointSize() {
 }
 
 @end
+
+// --------------------------------------------------
+
+#pragma mark -
+#pragma mark NSArray
+
+@implementation NSMutableSet (Additions)
+
+- (void)performSelectorOnObjects:(SEL)selector withObject:(id)object {
+    for (id object in self) {
+        if ([object respondsToSelector:selector]) {
+            [object performSelector:selector withObject:object];
+        }
+    }
+}
+
+- (void)performSelectorOnObjects:(SEL)selector withObject:(id)object withObject:(id)object2 {
+    for (id object in self) {
+        if ([object respondsToSelector:selector]) {
+            [object performSelector:selector withObject:object withObject:object2];
+        }
+    }
+}
+
+@end
+
+

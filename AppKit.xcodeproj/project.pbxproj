@@ -41,6 +41,11 @@
 		685F5627130A7B8C00AE3D4E /* AKLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 685F5625130A7B8C00AE3D4E /* AKLoadingView.m */; };
 		685F566A130A7FC200AE3D4E /* AKLoadingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 685F5668130A7FC200AE3D4E /* AKLoadingLabel.h */; };
 		685F566B130A7FC200AE3D4E /* AKLoadingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 685F5669130A7FC200AE3D4E /* AKLoadingLabel.m */; };
+		685F5712130A8D8B00AE3D4E /* TweetObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 685F5711130A8D8B00AE3D4E /* TweetObject.m */; };
+		685F573F130A8FA000AE3D4E /* AKModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 685F573D130A8FA000AE3D4E /* AKModel.h */; };
+		685F5740130A8FA000AE3D4E /* AKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 685F573E130A8FA000AE3D4E /* AKModel.m */; };
+		685F574D130A911F00AE3D4E /* AKRequestModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 685F574B130A911F00AE3D4E /* AKRequestModel.h */; };
+		685F574E130A911F00AE3D4E /* AKRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 685F574C130A911F00AE3D4E /* AKRequestModel.m */; };
 		68631054130A3B1C00283F99 /* AppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631053130A3B1C00283F99 /* AppKit.h */; };
 		68631059130A3B2600283F99 /* Global.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631057130A3B2600283F99 /* Global.h */; };
 		6863105A130A3B2600283F99 /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631058130A3B2600283F99 /* Global.m */; };
@@ -135,6 +140,12 @@
 		685F5625130A7B8C00AE3D4E /* AKLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKLoadingView.m; path = AppKit/AKLoadingView.m; sourceTree = SOURCE_ROOT; };
 		685F5668130A7FC200AE3D4E /* AKLoadingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKLoadingLabel.h; path = AppKit/AKLoadingLabel.h; sourceTree = SOURCE_ROOT; };
 		685F5669130A7FC200AE3D4E /* AKLoadingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKLoadingLabel.m; path = AppKit/AKLoadingLabel.m; sourceTree = SOURCE_ROOT; };
+		685F5710130A8D8B00AE3D4E /* TweetObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetObject.h; sourceTree = "<group>"; };
+		685F5711130A8D8B00AE3D4E /* TweetObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetObject.m; sourceTree = "<group>"; };
+		685F573D130A8FA000AE3D4E /* AKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKModel.h; path = AppKit/AKModel.h; sourceTree = SOURCE_ROOT; };
+		685F573E130A8FA000AE3D4E /* AKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKModel.m; path = AppKit/AKModel.m; sourceTree = SOURCE_ROOT; };
+		685F574B130A911F00AE3D4E /* AKRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKRequestModel.h; path = AppKit/AKRequestModel.h; sourceTree = SOURCE_ROOT; };
+		685F574C130A911F00AE3D4E /* AKRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKRequestModel.m; path = AppKit/AKRequestModel.m; sourceTree = SOURCE_ROOT; };
 		68631053130A3B1C00283F99 /* AppKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppKit.h; path = AppKit/AppKit.h; sourceTree = SOURCE_ROOT; };
 		68631057130A3B2600283F99 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Global.h; path = AppKit/Global.h; sourceTree = SOURCE_ROOT; };
 		68631058130A3B2600283F99 /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Global.m; path = AppKit/Global.m; sourceTree = SOURCE_ROOT; };
@@ -269,6 +280,7 @@
 				68631058130A3B2600283F99 /* Global.m */,
 				6863105B130A3B2E00283F99 /* Additions.h */,
 				6863105C130A3B2E00283F99 /* Additions.m */,
+				685F573C130A8F8B00AE3D4E /* Model */,
 				68F31DD012F70473004ADFF7 /* Image */,
 				685F5623130A7B6B00AE3D4E /* Views */,
 				68ED551612F3FA3A00F234B0 /* ViewController */,
@@ -356,6 +368,7 @@
 		685F5563130A761200AE3D4E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				685F570F130A8D7C00AE3D4E /* Object */,
 				685F5564130A762200AE3D4E /* PublicTimelineModel.h */,
 				685F5565130A762200AE3D4E /* PublicTimelineModel.m */,
 			);
@@ -371,6 +384,26 @@
 				685F5625130A7B8C00AE3D4E /* AKLoadingView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		685F570F130A8D7C00AE3D4E /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				685F5710130A8D8B00AE3D4E /* TweetObject.h */,
+				685F5711130A8D8B00AE3D4E /* TweetObject.m */,
+			);
+			name = Object;
+			sourceTree = "<group>";
+		};
+		685F573C130A8F8B00AE3D4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				685F573D130A8FA000AE3D4E /* AKModel.h */,
+				685F573E130A8FA000AE3D4E /* AKModel.m */,
+				685F574B130A911F00AE3D4E /* AKRequestModel.h */,
+				685F574C130A911F00AE3D4E /* AKRequestModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		6874E932130A45B300A793A2 /* TableViewController */ = {
@@ -521,6 +554,8 @@
 				685F553D130A74F700AE3D4E /* SBJsonWriter.h in Headers */,
 				685F5626130A7B8C00AE3D4E /* AKLoadingView.h in Headers */,
 				685F566A130A7FC200AE3D4E /* AKLoadingLabel.h in Headers */,
+				685F573F130A8FA000AE3D4E /* AKModel.h in Headers */,
+				685F574D130A911F00AE3D4E /* AKRequestModel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +644,7 @@
 				685F5465130A6F2000AE3D4E /* NetworkController.m in Sources */,
 				685F5560130A760000AE3D4E /* TwitterController.m in Sources */,
 				685F5566130A762200AE3D4E /* PublicTimelineModel.m in Sources */,
+				685F5712130A8D8B00AE3D4E /* TweetObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +682,8 @@
 				685F553E130A74F700AE3D4E /* SBJsonWriter.m in Sources */,
 				685F5627130A7B8C00AE3D4E /* AKLoadingView.m in Sources */,
 				685F566B130A7FC200AE3D4E /* AKLoadingLabel.m in Sources */,
+				685F5740130A8FA000AE3D4E /* AKModel.m in Sources */,
+				685F574E130A911F00AE3D4E /* AKRequestModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

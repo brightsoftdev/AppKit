@@ -32,3 +32,8 @@
 + (UIAlertView *)alertWithMessage:(NSString *)message;
 + (UIAlertView *)showAlertWithMessage:(NSString *)message;
 @end
+
+@interface NSMutableSet (Additions)
+- (void)performSelectorOnObjects:(SEL)selector withObject:(id)object;
+- (void)performSelectorOnObjects:(SEL)selector withObject:(id)object withObject:(id)object2;
+@end

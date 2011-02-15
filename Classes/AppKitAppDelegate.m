@@ -19,14 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
-    // Override point for customization after application 
-/*
-	[self.window addSubview:[AKNavigationController shared].view];
-	//self.navigationController.view.frame = self.window.frame;
-	[self.window makeKeyAndVisible];
-*/
-    
-    [TwitterController push];
+    NSArray *objects = [NSArray arrayWithObjects:@"Alpha", @"Beta", @"Omega", nil];
+    [objects test];
+    //[TwitterController push];
 
     return YES;
 }

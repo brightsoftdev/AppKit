@@ -10,5 +10,22 @@
 
 
 @implementation PublicTimelineModel
+@synthesize tweets = _tweets;
+
+- (id)init {
+    if (self = [super init]) {
+        _tweets = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+- (void)dealloc {
+    RELEASE(_tweets)
+    [super dealloc];
+}
+
+- (void)load {
+    //
+}
 
 @end

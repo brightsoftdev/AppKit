@@ -7,7 +7,9 @@
 //
 
 @interface PublicTimelineModel : NSObject {
-
+    NSMutableArray *_tweets;
 }
+
+@property (nonatomic, readonly) NSMutableArray *tweets;
 
 @end
