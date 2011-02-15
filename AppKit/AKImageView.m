@@ -79,7 +79,7 @@
     [_imageURL release];
     _imageURL = [value copy];
 
-    _request = [XURLRequest requestWithURL:_imageURL delegate:self];
+    _request = [AKURLRequest requestWithURL:_imageURL delegate:self];
     [_request start];
 }
 
@@ -91,7 +91,7 @@
 
 // ----------------------------------------
 
-- (void)requestDidFinishLoading:(XURLRequest *)request {
+- (void)requestDidFinishLoading:(AKURLRequest *)request {
     _imageView.alpha = 0.0;
     _imageView.image = [[[UIImage alloc] initWithData:request.data] autorelease];
 
@@ -107,7 +107,7 @@
 
 // ----------------------------------------
 
-- (void)request:(XURLRequest *)request didFailWithError:(NSError *)error {
+- (void)request:(AKURLRequest *)request didFailWithError:(NSError *)error {
     [_activityIndicatorView stopAnimating];
 }
 

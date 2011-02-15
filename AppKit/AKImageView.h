@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "XURLRequest.h"
+#import "AKURLRequest.h"
 
 @interface AKImageView : UIView <XURLRequestDelegate> {
     UIActivityIndicatorView *_activityIndicatorView;
@@ -16,7 +16,7 @@
     UIImageView *_imageView;
     NSString *_imageURL;
     //UIImage *_defaultImage;
-    XURLRequest *_request;
+    AKURLRequest *_request;
 }
 
 @property (nonatomic, retain) UIImage *defaultImage;

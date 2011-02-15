@@ -32,8 +32,8 @@
 		68631074130A3B7900283F99 /* AKTableViewGenericDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631072130A3B7900283F99 /* AKTableViewGenericDataSource.m */; };
 		68631079130A3B8400283F99 /* XNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631077130A3B8400283F99 /* XNavigationController.h */; };
 		6863107A130A3B8400283F99 /* XNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631078130A3B8400283F99 /* XNavigationController.m */; };
-		6863107D130A3B9700283F99 /* XURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6863107B130A3B9700283F99 /* XURLRequest.h */; };
-		6863107E130A3B9700283F99 /* XURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6863107C130A3B9700283F99 /* XURLRequest.m */; };
+		6863107D130A3B9700283F99 /* AKURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6863107B130A3B9700283F99 /* AKURLRequest.h */; };
+		6863107E130A3B9700283F99 /* AKURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6863107C130A3B9700283F99 /* AKURLRequest.m */; };
 		68631081130A3B9E00283F99 /* XGlobalNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 6863107F130A3B9E00283F99 /* XGlobalNetwork.h */; };
 		68631082130A3B9E00283F99 /* XGlobalNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631080130A3B9E00283F99 /* XGlobalNetwork.m */; };
 		68631085130A3BAB00283F99 /* AKTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631083130A3BAB00283F99 /* AKTableViewController.h */; };
@@ -97,8 +97,8 @@
 		68631072130A3B7900283F99 /* AKTableViewGenericDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKTableViewGenericDataSource.m; path = AppKit/AKTableViewGenericDataSource.m; sourceTree = SOURCE_ROOT; };
 		68631077130A3B8400283F99 /* XNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XNavigationController.h; path = AppKit/XNavigationController.h; sourceTree = SOURCE_ROOT; };
 		68631078130A3B8400283F99 /* XNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XNavigationController.m; path = AppKit/XNavigationController.m; sourceTree = SOURCE_ROOT; };
-		6863107B130A3B9700283F99 /* XURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XURLRequest.h; path = AppKit/XURLRequest.h; sourceTree = SOURCE_ROOT; };
-		6863107C130A3B9700283F99 /* XURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XURLRequest.m; path = AppKit/XURLRequest.m; sourceTree = SOURCE_ROOT; };
+		6863107B130A3B9700283F99 /* AKURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKURLRequest.h; path = AppKit/AKURLRequest.h; sourceTree = SOURCE_ROOT; };
+		6863107C130A3B9700283F99 /* AKURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKURLRequest.m; path = AppKit/AKURLRequest.m; sourceTree = SOURCE_ROOT; };
 		6863107F130A3B9E00283F99 /* XGlobalNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XGlobalNetwork.h; path = AppKit/XGlobalNetwork.h; sourceTree = SOURCE_ROOT; };
 		68631080130A3B9E00283F99 /* XGlobalNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XGlobalNetwork.m; path = AppKit/XGlobalNetwork.m; sourceTree = SOURCE_ROOT; };
 		68631083130A3BAB00283F99 /* AKTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKTableViewController.h; path = AppKit/AKTableViewController.h; sourceTree = SOURCE_ROOT; };
@@ -340,8 +340,8 @@
 		68F31D8112F7028A004ADFF7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				6863107B130A3B9700283F99 /* XURLRequest.h */,
-				6863107C130A3B9700283F99 /* XURLRequest.m */,
+				6863107B130A3B9700283F99 /* AKURLRequest.h */,
+				6863107C130A3B9700283F99 /* AKURLRequest.m */,
 				6863107F130A3B9E00283F99 /* XGlobalNetwork.h */,
 				68631080130A3B9E00283F99 /* XGlobalNetwork.m */,
 			);
@@ -373,7 +373,7 @@
 				6863106F130A3B6F00283F99 /* AKTableViewArrayDataSource.h in Headers */,
 				68631073130A3B7900283F99 /* AKTableViewGenericDataSource.h in Headers */,
 				68631079130A3B8400283F99 /* XNavigationController.h in Headers */,
-				6863107D130A3B9700283F99 /* XURLRequest.h in Headers */,
+				6863107D130A3B9700283F99 /* AKURLRequest.h in Headers */,
 				68631081130A3B9E00283F99 /* XGlobalNetwork.h in Headers */,
 				68631085130A3BAB00283F99 /* AKTableViewController.h in Headers */,
 				6863108A130A3BB900283F99 /* AKTableObject.h in Headers */,
@@ -484,7 +484,7 @@
 				68631070130A3B6F00283F99 /* AKTableViewArrayDataSource.m in Sources */,
 				68631074130A3B7900283F99 /* AKTableViewGenericDataSource.m in Sources */,
 				6863107A130A3B8400283F99 /* XNavigationController.m in Sources */,
-				6863107E130A3B9700283F99 /* XURLRequest.m in Sources */,
+				6863107E130A3B9700283F99 /* AKURLRequest.m in Sources */,
 				68631082130A3B9E00283F99 /* XGlobalNetwork.m in Sources */,
 				68631086130A3BAB00283F99 /* AKTableViewController.m in Sources */,
 				6863108B130A3BB900283F99 /* AKTableObject.m in Sources */,
