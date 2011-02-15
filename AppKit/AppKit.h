@@ -36,6 +36,6 @@
 #import "AKTableObject.h"
 #import "AKTableViewDelegate.h"
 
-#import "XTableTextObject.h"
-#import "XTableImageObject.h"
+#import "AKTableTextObject.h"
+#import "AKTableImageObject.h"
 

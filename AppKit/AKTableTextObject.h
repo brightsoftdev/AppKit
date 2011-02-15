@@ -10,7 +10,7 @@
 #import "AKTableObject.h"
 
 
-@interface XTableTextObject : AKTableObject {
+@interface AKTableTextObject : AKTableObject {
 	NSString *_text;
 }
 

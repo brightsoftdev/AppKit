@@ -6,10 +6,10 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "XTableViewControlCell.h"
+#import "AKTableViewControlCell.h"
 
 
-@implementation XTableViewControlCell
+@implementation AKTableViewControlCell
 
 - (void)setObject:(id)object {
 	[super setObject:object];

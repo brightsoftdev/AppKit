@@ -7,7 +7,7 @@
 //
 
 #import "Additions.h"
-#import "XTableViewControlCell.h"
+#import "AKTableViewControlCell.h"
 
 @implementation NSObject (Additions)
 @end
@@ -70,7 +70,7 @@ CGRect XRectMakeWithPointSize() {
 
 @implementation UITextField (Additions)
 + (Class)cellClass {
-	return [XTableViewControlCell class];
+	return [AKTableViewControlCell class];
 }
 @end
 

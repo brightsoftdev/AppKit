@@ -6,20 +6,20 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "XTableTextObject.h"
-#import "XTableTextCell.h"
+#import "AKTableTextObject.h"
+#import "AKTableTextCell.h"
 #import "Global.h"
 
-@implementation XTableTextObject
+@implementation AKTableTextObject
 
 @synthesize text = _text;
 
 + (Class)cellClass {
-	return [XTableTextCell class];
+	return [AKTableTextCell class];
 }
 
 + (id)itemWithText:(NSString *)text {
-	XTableTextObject *object = [[[[self class] alloc] init] autorelease];
+	AKTableTextObject *object = [[[[self class] alloc] init] autorelease];
 	object.text = text;
 	return object;
 }

@@ -1,5 +1,5 @@
 //
-//  XTableViewTextCell.h
+//  XTableViewControlCell.h
 //  iOSKit
 //
 //  Created by Hiroshi Horie on 11/01/30.
@@ -7,13 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AKTableCell.h"
+#import "AKTableTextCell.h"
 
-@interface XTableTextCell : AKTableCell {
+
+@interface AKTableViewControlCell : AKTableCell {
 
 }
 
-//@property (nonatomic, retain) XTableViewObject *object;
-
 @end
-

@@ -6,19 +6,19 @@
 //  Copyright 2011 netsystems. All rights reserved.
 //
 
-#import "XTableImageCell.h"
-#import "XTableImageObject.h"
+#import "AKTableImageCell.h"
+#import "AKTableImageObject.h"
 #import "Additions.h"
 #import "Global.h"
 
-@implementation XTableImageCell
+@implementation AKTableImageCell
 
 - (void)dealloc {
     RELEASE(_imageView2);
     [super dealloc];
 }
 
-- (void)setObject:(XTableImageObject *)object {
+- (void)setObject:(AKTableImageObject *)object {
 	[super setObject:object];
 	self.textLabel.text = object.imageURL;
     self.imageView2.imageURL = object.imageURL;

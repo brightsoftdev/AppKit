@@ -16,7 +16,7 @@
 	[self.navigationController pushViewController:controller animated:YES];
 }
 
-- (void)objectAction:(XTableTextObject *)tableObject {
+- (void)objectAction:(AKTableTextObject *)tableObject {
 	//tableObject.text = @"-";
 	//tableObject.enabled = NO;
 	//[tableObject update];
@@ -44,23 +44,23 @@
 									  @"This is some fuckin string.This is some fuckin string.This is some fuckin string.",
 									  nil];
 		
-		XTableTextObject *_textObject = [XTableTextObject itemWithText:@"Second item"];
+		AKTableTextObject *_textObject = [AKTableTextObject itemWithText:@"Second item"];
 		_textObject.delegate = self;
 		_textObject.selector = @selector(objectAction:);
 		//_textObject.enabled = NO;
         
-        XTableImageObject *_imageObject = [XTableImageObject itemWithText:@"Sigma is cool"];
+        AKTableImageObject *_imageObject = [AKTableImageObject itemWithText:@"Sigma is cool"];
         _imageObject.imageURL = @"http://www.google.co.jp/images/srpr/nav_logo27.png";
         
 		_dataSource.items = [NSArray arrayWithObjects:
 							 _imageObject,
 							 _textObject,
 							 [NSArray arrayWithObjects:
-                              [XTableTextObject itemWithText:@"Item aa"],
-                              [XTableTextObject itemWithText:@"Item aa"],
-                              [XTableTextObject itemWithText:@"Item aa"],
+                              [AKTableTextObject itemWithText:@"Item aa"],
+                              [AKTableTextObject itemWithText:@"Item aa"],
+                              [AKTableTextObject itemWithText:@"Item aa"],
                               nil],
-							 [XTableTextObject itemWithText:@"Sigma is cool"],
+							 [AKTableTextObject itemWithText:@"Sigma is cool"],
 							 nil];
     }
     return self;

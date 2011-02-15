@@ -41,7 +41,7 @@
                             timeoutInterval:30.0];
     _connection = [NSURLConnection connectionWithRequest:_request delegate:self];
 
-    XNetworkRequestStarted();
+    AKNetworkRequestStarted();
     
     if ([self.delegate respondsToSelector:@selector(requestDidStartLoad:)]) {
         [self.delegate requestDidStartLoad:self];
@@ -63,7 +63,7 @@
     if ([self.delegate respondsToSelector:@selector(requestDidFinishLoading:)]) {
         [self.delegate requestDidFinishLoading:self];
     }
-    XNetworkRequestStopped();
+    AKNetworkRequestStopped();
 }
 
 // --------------------------------------------------
@@ -72,7 +72,7 @@
     if ([self.delegate respondsToSelector:@selector(request:didFailWithError:)]) {
         [self.delegate request:self didFailWithError:error];
     }
-    XNetworkRequestStopped();
+    AKNetworkRequestStopped();
 }
 
 // --------------------------------------------------

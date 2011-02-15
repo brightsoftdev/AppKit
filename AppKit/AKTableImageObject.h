@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XTableTextObject.h"
+#import "AKTableTextObject.h"
 
-@interface XTableImageObject : XTableTextObject {
+@interface AKTableImageObject : AKTableTextObject {
     NSString *_imageURL;
 }
 

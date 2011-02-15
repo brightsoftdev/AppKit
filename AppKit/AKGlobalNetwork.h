@@ -15,7 +15,7 @@
  *
  * @threadsafe
  */
-void XNetworkRequestStarted();
+void AKNetworkRequestStarted();
 
 /**
  * Decrement the number of active network requests.
@@ -24,5 +24,5 @@ void XNetworkRequestStarted();
  *
  * @threadsafe
  */
-void XNetworkRequestStopped();
+void AKNetworkRequestStopped();
 

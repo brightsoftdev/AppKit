@@ -34,26 +34,26 @@
 		6863107A130A3B8400283F99 /* AKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631078130A3B8400283F99 /* AKNavigationController.m */; };
 		6863107D130A3B9700283F99 /* AKURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 6863107B130A3B9700283F99 /* AKURLRequest.h */; };
 		6863107E130A3B9700283F99 /* AKURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6863107C130A3B9700283F99 /* AKURLRequest.m */; };
-		68631081130A3B9E00283F99 /* XGlobalNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 6863107F130A3B9E00283F99 /* XGlobalNetwork.h */; };
-		68631082130A3B9E00283F99 /* XGlobalNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631080130A3B9E00283F99 /* XGlobalNetwork.m */; };
+		68631081130A3B9E00283F99 /* AKGlobalNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 6863107F130A3B9E00283F99 /* AKGlobalNetwork.h */; };
+		68631082130A3B9E00283F99 /* AKGlobalNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631080130A3B9E00283F99 /* AKGlobalNetwork.m */; };
 		68631085130A3BAB00283F99 /* AKTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631083130A3BAB00283F99 /* AKTableViewController.h */; };
 		68631086130A3BAB00283F99 /* AKTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631084130A3BAB00283F99 /* AKTableViewController.m */; };
 		6863108A130A3BB900283F99 /* AKTableObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631088130A3BB900283F99 /* AKTableObject.h */; };
 		6863108B130A3BB900283F99 /* AKTableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631089130A3BB900283F99 /* AKTableObject.m */; };
-		68631092130A405900283F99 /* XTableTextObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631090130A405900283F99 /* XTableTextObject.h */; };
-		68631093130A405900283F99 /* XTableTextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631091130A405900283F99 /* XTableTextObject.m */; };
+		68631092130A405900283F99 /* AKTableTextObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631090130A405900283F99 /* AKTableTextObject.h */; };
+		68631093130A405900283F99 /* AKTableTextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631091130A405900283F99 /* AKTableTextObject.m */; };
 		6863109A130A406900283F99 /* AKTableViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 68631098130A406900283F99 /* AKTableViewDelegate.h */; };
 		6863109B130A406900283F99 /* AKTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68631099130A406900283F99 /* AKTableViewDelegate.m */; };
-		6863109E130A407500283F99 /* XTableViewControlCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6863109C130A407500283F99 /* XTableViewControlCell.h */; };
-		6863109F130A407500283F99 /* XTableViewControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6863109D130A407500283F99 /* XTableViewControlCell.m */; };
-		686310A4130A408100283F99 /* XTableImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 686310A0130A408100283F99 /* XTableImageCell.h */; };
-		686310A5130A408100283F99 /* XTableImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686310A1130A408100283F99 /* XTableImageCell.m */; };
-		686310A6130A408100283F99 /* XTableImageObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 686310A2130A408100283F99 /* XTableImageObject.h */; };
-		686310A7130A408100283F99 /* XTableImageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 686310A3130A408100283F99 /* XTableImageObject.m */; };
+		6863109E130A407500283F99 /* AKTableViewControlCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6863109C130A407500283F99 /* AKTableViewControlCell.h */; };
+		6863109F130A407500283F99 /* AKTableViewControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6863109D130A407500283F99 /* AKTableViewControlCell.m */; };
+		686310A4130A408100283F99 /* AKTableImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 686310A0130A408100283F99 /* AKTableImageCell.h */; };
+		686310A5130A408100283F99 /* AKTableImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686310A1130A408100283F99 /* AKTableImageCell.m */; };
+		686310A6130A408100283F99 /* AKTableImageObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 686310A2130A408100283F99 /* AKTableImageObject.h */; };
+		686310A7130A408100283F99 /* AKTableImageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 686310A3130A408100283F99 /* AKTableImageObject.m */; };
 		686310D4130A410800283F99 /* AKTableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 686310D2130A410800283F99 /* AKTableCell.h */; };
 		686310D5130A410800283F99 /* AKTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686310D3130A410800283F99 /* AKTableCell.m */; };
-		686310DC130A411400283F99 /* XTableTextCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 686310DA130A411400283F99 /* XTableTextCell.h */; };
-		686310DD130A411400283F99 /* XTableTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686310DB130A411400283F99 /* XTableTextCell.m */; };
+		686310DC130A411400283F99 /* AKTableTextCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 686310DA130A411400283F99 /* AKTableTextCell.h */; };
+		686310DD130A411400283F99 /* AKTableTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686310DB130A411400283F99 /* AKTableTextCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,26 +99,26 @@
 		68631078130A3B8400283F99 /* AKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKNavigationController.m; path = AppKit/AKNavigationController.m; sourceTree = SOURCE_ROOT; };
 		6863107B130A3B9700283F99 /* AKURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKURLRequest.h; path = AppKit/AKURLRequest.h; sourceTree = SOURCE_ROOT; };
 		6863107C130A3B9700283F99 /* AKURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKURLRequest.m; path = AppKit/AKURLRequest.m; sourceTree = SOURCE_ROOT; };
-		6863107F130A3B9E00283F99 /* XGlobalNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XGlobalNetwork.h; path = AppKit/XGlobalNetwork.h; sourceTree = SOURCE_ROOT; };
-		68631080130A3B9E00283F99 /* XGlobalNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XGlobalNetwork.m; path = AppKit/XGlobalNetwork.m; sourceTree = SOURCE_ROOT; };
+		6863107F130A3B9E00283F99 /* AKGlobalNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKGlobalNetwork.h; path = AppKit/AKGlobalNetwork.h; sourceTree = SOURCE_ROOT; };
+		68631080130A3B9E00283F99 /* AKGlobalNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKGlobalNetwork.m; path = AppKit/AKGlobalNetwork.m; sourceTree = SOURCE_ROOT; };
 		68631083130A3BAB00283F99 /* AKTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKTableViewController.h; path = AppKit/AKTableViewController.h; sourceTree = SOURCE_ROOT; };
 		68631084130A3BAB00283F99 /* AKTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKTableViewController.m; path = AppKit/AKTableViewController.m; sourceTree = SOURCE_ROOT; };
 		68631088130A3BB900283F99 /* AKTableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKTableObject.h; path = AppKit/AKTableObject.h; sourceTree = SOURCE_ROOT; };
 		68631089130A3BB900283F99 /* AKTableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKTableObject.m; path = AppKit/AKTableObject.m; sourceTree = SOURCE_ROOT; };
-		68631090130A405900283F99 /* XTableTextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTableTextObject.h; path = AppKit/XTableTextObject.h; sourceTree = SOURCE_ROOT; };
-		68631091130A405900283F99 /* XTableTextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XTableTextObject.m; path = AppKit/XTableTextObject.m; sourceTree = SOURCE_ROOT; };
+		68631090130A405900283F99 /* AKTableTextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKTableTextObject.h; path = AppKit/AKTableTextObject.h; sourceTree = SOURCE_ROOT; };
+		68631091130A405900283F99 /* AKTableTextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKTableTextObject.m; path = AppKit/AKTableTextObject.m; sourceTree = SOURCE_ROOT; };
 		68631098130A406900283F99 /* AKTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKTableViewDelegate.h; path = AppKit/AKTableViewDelegate.h; sourceTree = SOURCE_ROOT; };
 		68631099130A406900283F99 /* AKTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKTableViewDelegate.m; path = AppKit/AKTableViewDelegate.m; sourceTree = SOURCE_ROOT; };
-		6863109C130A407500283F99 /* XTableViewControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTableViewControlCell.h; path = AppKit/XTableViewControlCell.h; sourceTree = SOURCE_ROOT; };
-		6863109D130A407500283F99 /* XTableViewControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XTableViewControlCell.m; path = AppKit/XTableViewControlCell.m; sourceTree = SOURCE_ROOT; };
-		686310A0130A408100283F99 /* XTableImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTableImageCell.h; path = AppKit/XTableImageCell.h; sourceTree = SOURCE_ROOT; };
-		686310A1130A408100283F99 /* XTableImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XTableImageCell.m; path = AppKit/XTableImageCell.m; sourceTree = SOURCE_ROOT; };
-		686310A2130A408100283F99 /* XTableImageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTableImageObject.h; path = AppKit/XTableImageObject.h; sourceTree = SOURCE_ROOT; };
-		686310A3130A408100283F99 /* XTableImageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XTableImageObject.m; path = AppKit/XTableImageObject.m; sourceTree = SOURCE_ROOT; };
+		6863109C130A407500283F99 /* AKTableViewControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKTableViewControlCell.h; path = AppKit/AKTableViewControlCell.h; sourceTree = SOURCE_ROOT; };
+		6863109D130A407500283F99 /* AKTableViewControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKTableViewControlCell.m; path = AppKit/AKTableViewControlCell.m; sourceTree = SOURCE_ROOT; };
+		686310A0130A408100283F99 /* AKTableImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKTableImageCell.h; path = AppKit/AKTableImageCell.h; sourceTree = SOURCE_ROOT; };
+		686310A1130A408100283F99 /* AKTableImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKTableImageCell.m; path = AppKit/AKTableImageCell.m; sourceTree = SOURCE_ROOT; };
+		686310A2130A408100283F99 /* AKTableImageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKTableImageObject.h; path = AppKit/AKTableImageObject.h; sourceTree = SOURCE_ROOT; };
+		686310A3130A408100283F99 /* AKTableImageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKTableImageObject.m; path = AppKit/AKTableImageObject.m; sourceTree = SOURCE_ROOT; };
 		686310D2130A410800283F99 /* AKTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKTableCell.h; path = AppKit/AKTableCell.h; sourceTree = SOURCE_ROOT; };
 		686310D3130A410800283F99 /* AKTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKTableCell.m; path = AppKit/AKTableCell.m; sourceTree = SOURCE_ROOT; };
-		686310DA130A411400283F99 /* XTableTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTableTextCell.h; path = AppKit/XTableTextCell.h; sourceTree = SOURCE_ROOT; };
-		686310DB130A411400283F99 /* XTableTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XTableTextCell.m; path = AppKit/XTableTextCell.m; sourceTree = SOURCE_ROOT; };
+		686310DA130A411400283F99 /* AKTableTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKTableTextCell.h; path = AppKit/AKTableTextCell.h; sourceTree = SOURCE_ROOT; };
+		686310DB130A411400283F99 /* AKTableTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKTableTextCell.m; path = AppKit/AKTableTextCell.m; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* AppKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AppKit-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -263,10 +263,10 @@
 		68BD0AE512F86AA300D950C7 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				686310A0130A408100283F99 /* XTableImageCell.h */,
-				686310A1130A408100283F99 /* XTableImageCell.m */,
-				686310A2130A408100283F99 /* XTableImageObject.h */,
-				686310A3130A408100283F99 /* XTableImageObject.m */,
+				686310A0130A408100283F99 /* AKTableImageCell.h */,
+				686310A1130A408100283F99 /* AKTableImageCell.m */,
+				686310A2130A408100283F99 /* AKTableImageObject.h */,
+				686310A3130A408100283F99 /* AKTableImageObject.m */,
 			);
 			name = Image;
 			sourceTree = "<group>";
@@ -310,10 +310,10 @@
 		68E8D03012F4A690002C4E54 /* Text */ = {
 			isa = PBXGroup;
 			children = (
-				68631090130A405900283F99 /* XTableTextObject.h */,
-				68631091130A405900283F99 /* XTableTextObject.m */,
-				686310DA130A411400283F99 /* XTableTextCell.h */,
-				686310DB130A411400283F99 /* XTableTextCell.m */,
+				68631090130A405900283F99 /* AKTableTextObject.h */,
+				68631091130A405900283F99 /* AKTableTextObject.m */,
+				686310DA130A411400283F99 /* AKTableTextCell.h */,
+				686310DB130A411400283F99 /* AKTableTextCell.m */,
 			);
 			name = Text;
 			sourceTree = "<group>";
@@ -321,8 +321,8 @@
 		68E8D07612F4ACCB002C4E54 /* Control */ = {
 			isa = PBXGroup;
 			children = (
-				6863109C130A407500283F99 /* XTableViewControlCell.h */,
-				6863109D130A407500283F99 /* XTableViewControlCell.m */,
+				6863109C130A407500283F99 /* AKTableViewControlCell.h */,
+				6863109D130A407500283F99 /* AKTableViewControlCell.m */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -342,8 +342,8 @@
 			children = (
 				6863107B130A3B9700283F99 /* AKURLRequest.h */,
 				6863107C130A3B9700283F99 /* AKURLRequest.m */,
-				6863107F130A3B9E00283F99 /* XGlobalNetwork.h */,
-				68631080130A3B9E00283F99 /* XGlobalNetwork.m */,
+				6863107F130A3B9E00283F99 /* AKGlobalNetwork.h */,
+				68631080130A3B9E00283F99 /* AKGlobalNetwork.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -374,16 +374,16 @@
 				68631073130A3B7900283F99 /* AKTableViewGenericDataSource.h in Headers */,
 				68631079130A3B8400283F99 /* AKNavigationController.h in Headers */,
 				6863107D130A3B9700283F99 /* AKURLRequest.h in Headers */,
-				68631081130A3B9E00283F99 /* XGlobalNetwork.h in Headers */,
+				68631081130A3B9E00283F99 /* AKGlobalNetwork.h in Headers */,
 				68631085130A3BAB00283F99 /* AKTableViewController.h in Headers */,
 				6863108A130A3BB900283F99 /* AKTableObject.h in Headers */,
-				68631092130A405900283F99 /* XTableTextObject.h in Headers */,
+				68631092130A405900283F99 /* AKTableTextObject.h in Headers */,
 				6863109A130A406900283F99 /* AKTableViewDelegate.h in Headers */,
-				6863109E130A407500283F99 /* XTableViewControlCell.h in Headers */,
-				686310A4130A408100283F99 /* XTableImageCell.h in Headers */,
-				686310A6130A408100283F99 /* XTableImageObject.h in Headers */,
+				6863109E130A407500283F99 /* AKTableViewControlCell.h in Headers */,
+				686310A4130A408100283F99 /* AKTableImageCell.h in Headers */,
+				686310A6130A408100283F99 /* AKTableImageObject.h in Headers */,
 				686310D4130A410800283F99 /* AKTableCell.h in Headers */,
-				686310DC130A411400283F99 /* XTableTextCell.h in Headers */,
+				686310DC130A411400283F99 /* AKTableTextCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,16 +485,16 @@
 				68631074130A3B7900283F99 /* AKTableViewGenericDataSource.m in Sources */,
 				6863107A130A3B8400283F99 /* AKNavigationController.m in Sources */,
 				6863107E130A3B9700283F99 /* AKURLRequest.m in Sources */,
-				68631082130A3B9E00283F99 /* XGlobalNetwork.m in Sources */,
+				68631082130A3B9E00283F99 /* AKGlobalNetwork.m in Sources */,
 				68631086130A3BAB00283F99 /* AKTableViewController.m in Sources */,
 				6863108B130A3BB900283F99 /* AKTableObject.m in Sources */,
-				68631093130A405900283F99 /* XTableTextObject.m in Sources */,
+				68631093130A405900283F99 /* AKTableTextObject.m in Sources */,
 				6863109B130A406900283F99 /* AKTableViewDelegate.m in Sources */,
-				6863109F130A407500283F99 /* XTableViewControlCell.m in Sources */,
-				686310A5130A408100283F99 /* XTableImageCell.m in Sources */,
-				686310A7130A408100283F99 /* XTableImageObject.m in Sources */,
+				6863109F130A407500283F99 /* AKTableViewControlCell.m in Sources */,
+				686310A5130A408100283F99 /* AKTableImageCell.m in Sources */,
+				686310A7130A408100283F99 /* AKTableImageObject.m in Sources */,
 				686310D5130A410800283F99 /* AKTableCell.m in Sources */,
-				686310DD130A411400283F99 /* XTableTextCell.m in Sources */,
+				686310DD130A411400283F99 /* AKTableTextCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

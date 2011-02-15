@@ -6,13 +6,13 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "XTableTextCell.h"
-#import "XTableTextObject.h"
+#import "AKTableTextCell.h"
+#import "AKTableTextObject.h"
 
-@implementation XTableTextCell
+@implementation AKTableTextCell
 //@dynamic object;
 
-- (void)setObject:(XTableTextObject *)object {
+- (void)setObject:(AKTableTextObject *)object {
 	[super setObject:object];
 	self.textLabel.text = object.text;
 }

@@ -6,7 +6,7 @@
 //  Copyright 2011 netsystems. All rights reserved.
 //
 
-#import "XGlobalNetwork.h"
+#import "AKGlobalNetwork.h"
 #import <UIKit/UIKit.h>
 #import <pthread.h>
 
@@ -15,7 +15,7 @@ static pthread_mutex_t  gMutex = PTHREAD_MUTEX_INITIALIZER;
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-void XNetworkRequestStarted() {
+void AKNetworkRequestStarted() {
     pthread_mutex_lock(&gMutex);
     
     if (0 == gNetworkTaskCount) {
@@ -28,7 +28,7 @@ void XNetworkRequestStarted() {
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-void XNetworkRequestStopped() {
+void AKNetworkRequestStopped() {
     pthread_mutex_lock(&gMutex);
     
     --gNetworkTaskCount;

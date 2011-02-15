@@ -6,15 +6,15 @@
 //  Copyright 2011 netsystems. All rights reserved.
 //
 
-#import "XTableImageObject.h"
-#import "XTableImageCell.h"
+#import "AKTableImageObject.h"
+#import "AKTableImageCell.h"
 #import "Global.h"
 
-@implementation XTableImageObject
+@implementation AKTableImageObject
 @synthesize imageURL = _imageURL;
 
 + (Class)cellClass {
-	return [XTableImageCell class];
+	return [AKTableImageCell class];
 }
 
 - (void)dealloc {

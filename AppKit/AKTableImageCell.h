@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "AKImageView.h"
-#import "XTableTextCell.h"
+#import "AKTableTextCell.h"
 
-@interface XTableImageCell : XTableTextCell {
+@interface AKTableImageCell : AKTableTextCell {
     AKImageView *_imageView2;
 }
 
