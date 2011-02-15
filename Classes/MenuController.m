@@ -8,6 +8,7 @@
 
 #import "MenuController.h"
 #import "NetworkController.h"
+#import "TwitterController.h"
 
 @implementation MenuController
 
@@ -20,6 +21,10 @@
 
 - (void)networkAction:(id)sender {
     [NetworkController push];
+}
+
+- (void)twitterAction:(id)sender {
+    [TwitterController push];
 }
 
 - (void)objectAction:(AKTableTextObject *)tableObject {
@@ -56,6 +61,7 @@
     dataSource.items = [NSArray arrayWithObjects:
 
                         [NSArray arrayWithObjects:
+                         [AKTableTextObject itemWithText:@"Twitter Sample" delegate:self selector:@selector(twitterAction:)],
                          [AKTableTextObject itemWithText:@"Network Controller" delegate:self selector:@selector(networkAction:)],
                          nil],
 

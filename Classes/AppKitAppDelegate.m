@@ -10,6 +10,7 @@
 
 #import "MenuController.h"
 #import "TestController2.h"
+#import "TwitterController.h"
 
 @implementation AppKitAppDelegate
 
@@ -25,7 +26,7 @@
 	[self.window makeKeyAndVisible];
 */
     
-    [MenuController push];
+    [TwitterController push];
 
     return YES;
 }

@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 
 #define RELEASE(__POINTER) { [__POINTER release]; __POINTER = nil; }
+#define LOCSTR(key) \
+[[NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:nil]
 
 static inline CGRect AKScreenBounds() {
 	return [UIScreen mainScreen].bounds;
