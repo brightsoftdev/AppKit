@@ -7,12 +7,12 @@
 //
 
 #import "Additions.h"
-#import "XNavigationController.h"
+#import "AKNavigationController.h"
 
-@implementation XNavigationController
+@implementation AKNavigationController
 
-+ (XNavigationController *) shared{
-    static XNavigationController *instance = NULL;
++ (AKNavigationController *) shared{
+    static AKNavigationController *instance = NULL;
     if (!instance) {
         instance = [[self alloc] initWithNibName:nil bundle:nil];
     }

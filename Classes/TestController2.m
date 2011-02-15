@@ -15,7 +15,7 @@
     //[TestController2 push];
     //[[[[TestController2 alloc] initWithNibName:nil bundle:nil] autorelease] push];
     TestController1 *tableViewController = [[[TestController1 alloc] initWithNibName:nil bundle:nil] autorelease];
-    [[XNavigationController shared] pushViewController:tableViewController animated:YES];
+    [[AKNavigationController shared] pushViewController:tableViewController animated:YES];
 
     //[[[[TestController2 alloc] initWithTitle:[NSString stringWithFormat:@"R : %d", arc4random()]] autorelease] push];
 }

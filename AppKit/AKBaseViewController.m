@@ -10,19 +10,19 @@
 #import <QuartzCore/QuartzCore.h>
 
 #import "AKBaseViewController.h"
-#import "XNavigationController.h"
+#import "AKNavigationController.h"
 
 @implementation AKBaseViewController
 
 + (AKBaseViewController *)push {
     AKBaseViewController *controller = [[self alloc] initWithNibName:nil bundle:nil];
-    [[XNavigationController shared] pushViewController:controller animated:YES];
+    [[AKNavigationController shared] pushViewController:controller animated:YES];
 
     return controller;
 }
 
 - (AKBaseViewController *)push {
-    [[XNavigationController shared] pushViewController:self animated:YES];
+    [[AKNavigationController shared] pushViewController:self animated:YES];
     return self;
 }
 

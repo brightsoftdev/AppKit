@@ -16,7 +16,7 @@
 #import "Additions.h"
 
 // Navigation
-#import "XNavigationController.h"
+#import "AKNavigationController.h"
 
 
 // Network

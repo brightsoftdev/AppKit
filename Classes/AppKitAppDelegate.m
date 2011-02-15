@@ -22,13 +22,13 @@
     
     // Override point for customization after application 
 
-	[self.window addSubview:[XNavigationController shared].view];
+	[self.window addSubview:[AKNavigationController shared].view];
 	//self.navigationController.view.frame = self.window.frame;
 	[self.window makeKeyAndVisible];
 
     
     AKBaseViewController *controller = [[[TestController2 alloc] initWithNibName:nil bundle:nil] autorelease];
-    [[XNavigationController shared] pushViewController:controller animated:YES];
+    [[AKNavigationController shared] pushViewController:controller animated:YES];
 
 
 	//application.statusBarStyle = UIStatusBarStyleBlackTranslucent;

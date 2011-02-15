@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XNavigationController : UINavigationController {
+@interface AKNavigationController : UINavigationController {
 
 }
 
-+ (XNavigationController *)shared;
++ (AKNavigationController *)shared;
 
 @end
