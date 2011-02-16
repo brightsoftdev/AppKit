@@ -188,6 +188,7 @@
 		686310D3130A410800283F99 /* AKTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKTableCell.m; path = AppKit/AKTableCell.m; sourceTree = SOURCE_ROOT; };
 		686310DA130A411400283F99 /* AKTableTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKTableTextCell.h; path = AppKit/AKTableTextCell.h; sourceTree = SOURCE_ROOT; };
 		686310DB130A411400283F99 /* AKTableTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKTableTextCell.m; path = AppKit/AKTableTextCell.m; sourceTree = SOURCE_ROOT; };
+		68EFF051130C0EC70028B681 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* AppKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AppKit-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,6 +279,7 @@
 		6835630B12F3E7B20025F818 /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
+				68EFF051130C0EC70028B681 /* README */,
 				68631053130A3B1C00283F99 /* AppKit.h */,
 				68631057130A3B2600283F99 /* Global.h */,
 				68631058130A3B2600283F99 /* Global.m */,

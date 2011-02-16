@@ -36,6 +36,4 @@
     return [AKTableTextObject itemWithText:@"Some item"];
 }
 
-- 
-
 @end
