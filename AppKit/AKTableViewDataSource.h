@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "AKModel.h"
 
 @class AKTableObject;
 @interface AKTableViewDataSource : NSObject <UITableViewDataSource> {
@@ -16,5 +17,6 @@
 
 - (AKTableObject *)tableView:(UITableView *)tableView objectForRowAtIndexPath:(NSIndexPath *)indexPath;
 - (NSIndexPath*)tableView:(UITableView*)tableView indexPathForObject:(id)object;
+- (id<AKModelProtocol>)model;
 
 @end

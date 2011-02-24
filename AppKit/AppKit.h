@@ -27,6 +27,9 @@
 
 #import "AKImageView.h"
 
+// WebController
+#import "AKWebController.h"
+
 // ViewController
 #import "AKBaseViewController.h"
 #import "AKTableViewController.h"

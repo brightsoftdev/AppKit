@@ -34,6 +34,11 @@
 	}
 }
 */
+
+- (id <AKModelProtocol>) model{
+	return nil;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	return 0;
 }

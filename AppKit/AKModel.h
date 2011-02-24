@@ -20,7 +20,7 @@
 /*
  * A Model is a simple object that holds data.
  */
-@interface AKModel : NSObject {
+@interface AKModel : NSObject <AKModelProtocol> {
     BOOL _modified;
     NSMutableSet *_delegates;
 }

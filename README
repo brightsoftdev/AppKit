@@ -6,5 +6,8 @@ Current status is Alpha, completely unstable. Do not use for production.
 
 - uses the JSON-Framework for JSON parsing.
 https://github.com/stig/json-framework
+<<<<<<< HEAD
 
 This is a test.
+=======
+>>>>>>> cb94fea74a8aff2d111cfab753962f54979e7315

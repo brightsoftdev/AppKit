@@ -19,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
-    [TwitterController push];
+    [AKWebController push];
 
     return YES;
 }
