@@ -84,6 +84,12 @@
     
     return controller;
 }
+
+- (UIViewController *)push {
+    [[AKNavigationController shared] pushViewController:self animated:YES];
+    return self;	
+}
+
 @end
 
 // --------------------------------------------------

@@ -12,6 +12,8 @@
 #import "TestController2.h"
 #import "TwitterController.h"
 
+#import "AKWebController.h"
+
 @implementation AppKitAppDelegate
 
 #pragma mark -
@@ -19,7 +21,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
-    [AKWebController push];
+    //[AKWebController push];
+	[[[[AKWebController alloc] initWithURL:@"http://www.google.com"] autorelease] push];
+	//[[AKWebController alloc] initWithURL:@""];
 
     return YES;
 }

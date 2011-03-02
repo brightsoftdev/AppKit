@@ -21,6 +21,7 @@
 
 @interface UIViewController (Additions)
 + (UIViewController *)push;
+- (UIViewController *)push;
 @end
 
 

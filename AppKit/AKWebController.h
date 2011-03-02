@@ -10,7 +10,17 @@
 #import <UIKit/UIKit.h>
 #import "AKBaseViewController.h"
 
-@interface AKWebController : AKBaseViewController <UIWebViewDelegate> {
+@interface AKWebController : AKBaseViewController <UIWebViewDelegate, UIActionSheetDelegate> {
+	NSString *_initialURL;
+
 	UIWebView *_webView;
+	NSMutableArray *_dynamicToolbarItems;
+	UIBarButtonItem *_backButton;
+	UIBarButtonItem *_forwardButton;
 }
+
+@property (nonatomic, copy) NSString *initialURL;
+
+- (id)initWithURL:(NSString *)URL;
+
 @end
