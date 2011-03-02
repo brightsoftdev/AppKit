@@ -13,8 +13,8 @@
 //@dynamic object;
 
 - (void)setObject:(AKTableTextObject *)object {
-	[super setObject:object];
-	self.textLabel.text = object.text;
+    [super setObject:object];
+    self.textLabel.text = object.text;
 }
 
 @end

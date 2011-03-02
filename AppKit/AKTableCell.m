@@ -16,43 +16,43 @@
 @synthesize enabled = _enabled;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-	if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-		/*
-		_enabled = YES;
-		self.enabled = YES;
-		*/
-	}
-	return self;
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        /*
+        _enabled = YES;
+        self.enabled = YES;
+        */
+    }
+    return self;
 }
 
 - (void)dealloc {
-	RELEASE(_object);
-	[super dealloc];
+    RELEASE(_object);
+    [super dealloc];
 }
 
 - (void)setObject:(id)object {
-	RELEASE(_object);
-	_object = [object retain];
+    RELEASE(_object);
+    _object = [object retain];
 
-	if ([object isKindOfClass:[AKTableObject class]]) {
-		AKTableObject *tableObject = object;
-		self.enabled = tableObject.enabled;
-	}
-	
-//	self.textLabel.text = @"Omega";
+    if ([object isKindOfClass:[AKTableObject class]]) {
+        AKTableObject *tableObject = object;
+        self.enabled = tableObject.enabled;
+    }
+    
+//    self.textLabel.text = @"Omega";
 }
 
 - (void)setEnabled:(BOOL)value {
-	//if (_enabled != value) {
-		if (value) {
-			self.selectionStyle = UITableViewCellSelectionStyleBlue;
-			self.textLabel.textColor = [UIColor blackColor];
-		} else {
-			self.selectionStyle = UITableViewCellSelectionStyleNone;
-			self.textLabel.textColor = [UIColor grayColor];
-		}
-	//}
-	_enabled = value;
+    //if (_enabled != value) {
+        if (value) {
+            self.selectionStyle = UITableViewCellSelectionStyleBlue;
+            self.textLabel.textColor = [UIColor blackColor];
+        } else {
+            self.selectionStyle = UITableViewCellSelectionStyleNone;
+            self.textLabel.textColor = [UIColor grayColor];
+        }
+    //}
+    _enabled = value;
 }
 
 @end

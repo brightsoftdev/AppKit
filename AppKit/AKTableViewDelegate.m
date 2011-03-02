@@ -22,15 +22,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-	AKTableViewDataSource *dataSource = tableView.dataSource;
-	id object = [dataSource tableView:tableView objectForRowAtIndexPath:indexPath];
-	if ([object isKindOfClass:[AKTableObject class]]) {
-		AKTableObject *tableObject = object;
-		if (tableObject.enabled && [tableObject.delegate respondsToSelector:tableObject.selector]) {
-			[tableObject.delegate performSelector:tableObject.selector withObject:tableObject];
-		}
-	}
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+    AKTableViewDataSource *dataSource = tableView.dataSource;
+    id object = [dataSource tableView:tableView objectForRowAtIndexPath:indexPath];
+    if ([object isKindOfClass:[AKTableObject class]]) {
+        AKTableObject *tableObject = object;
+        if (tableObject.enabled && [tableObject.delegate respondsToSelector:tableObject.selector]) {
+            [tableObject.delegate performSelector:tableObject.selector withObject:tableObject];
+        }
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

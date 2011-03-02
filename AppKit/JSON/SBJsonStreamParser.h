@@ -37,9 +37,9 @@
 @class SBJsonStreamParserState;
 
 typedef enum {
-	SBJsonStreamParserComplete,
-	SBJsonStreamParserWaitingForData,
-	SBJsonStreamParserError,
+    SBJsonStreamParserComplete,
+    SBJsonStreamParserWaitingForData,
+    SBJsonStreamParserError,
 } SBJsonStreamParserStatus;
 
 
@@ -86,12 +86,12 @@ typedef enum {
  
  */
 @interface SBJsonStreamParser : NSObject {
-	BOOL multi;
-	id<SBJsonStreamParserDelegate> delegate;
-	SBJsonTokeniser *tokeniser;
-	SBJsonStreamParserState **states;
-	NSUInteger depth, maxDepth;
-	NSString *error;
+    BOOL multi;
+    id<SBJsonStreamParserDelegate> delegate;
+    SBJsonTokeniser *tokeniser;
+    SBJsonStreamParserState **states;
+    NSUInteger depth, maxDepth;
+    NSString *error;
 }
 
 /**

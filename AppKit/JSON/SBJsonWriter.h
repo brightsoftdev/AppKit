@@ -52,11 +52,11 @@
  
  */
 @interface SBJsonWriter : NSObject {
-	
+    
 @protected
     NSString *error;
     NSUInteger maxDepth;
-	
+    
 @private
     BOOL sortKeys, humanReadable;
 }

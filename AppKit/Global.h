@@ -14,11 +14,11 @@
 [[NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:nil]
 
 static inline CGRect AKScreenBounds() {
-	return [UIScreen mainScreen].bounds;
+    return [UIScreen mainScreen].bounds;
 }
 
 static inline CGRect AKApplicationFrame() {
-	return [UIScreen mainScreen].applicationFrame;
+    return [UIScreen mainScreen].applicationFrame;
 }
 
 static inline NSString *AKBundleDisplayName() {

@@ -34,9 +34,9 @@
 #import "SBJsonStreamParser.h"
 
 typedef enum {
-	SBJsonStreamParserAdapterNone,
-	SBJsonStreamParserAdapterArray,
-	SBJsonStreamParserAdapterObject,
+    SBJsonStreamParserAdapterNone,
+    SBJsonStreamParserAdapterArray,
+    SBJsonStreamParserAdapterObject,
 } SBJsonStreamParserAdapterType;
 
 /**
@@ -59,14 +59,14 @@ typedef enum {
 
 
 @interface SBJsonStreamParserAdapter : NSObject <SBJsonStreamParserDelegate> {
-	id<SBJsonStreamParserAdapterDelegate> delegate;
-	NSUInteger skip, depth;
-	__weak NSMutableArray *array;
-	__weak NSMutableDictionary *dict;
-	NSMutableArray *keyStack;
-	NSMutableArray *stack;
-	
-	SBJsonStreamParserAdapterType currentType;
+    id<SBJsonStreamParserAdapterDelegate> delegate;
+    NSUInteger skip, depth;
+    __weak NSMutableArray *array;
+    __weak NSMutableDictionary *dict;
+    NSMutableArray *keyStack;
+    NSMutableArray *stack;
+    
+    SBJsonStreamParserAdapterType currentType;
 }
 
 /**

@@ -17,22 +17,22 @@
 @synthesize tableView = _tableView;
 
 + (Class)cellClass {
-	return [AKTableCell class];
+    return [AKTableCell class];
 }
 
 - (id)init {
-	if (self = [super init]) {
-		self.enabled = YES;
-	}
-	return self;
+    if (self = [super init]) {
+        self.enabled = YES;
+    }
+    return self;
 }
 
 - (void)update {
-	NSIndexPath *indexPath = [(AKTableViewDataSource *)_tableView.dataSource tableView:_tableView indexPathForObject:self];
-	UITableViewCell *cell = [(AKTableViewDataSource *)_tableView.dataSource tableView:_tableView cellForRowAtIndexPath:indexPath];
-	//[cell setNeedsLayout];
-	[_tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
-	[cell setSelected:YES animated:YES];
+    NSIndexPath *indexPath = [(AKTableViewDataSource *)_tableView.dataSource tableView:_tableView indexPathForObject:self];
+    UITableViewCell *cell = [(AKTableViewDataSource *)_tableView.dataSource tableView:_tableView cellForRowAtIndexPath:indexPath];
+    //[cell setNeedsLayout];
+    [_tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    [cell setSelected:YES animated:YES];
 }
 
 @end

@@ -42,11 +42,11 @@
  
  @code
  - (id)proxyForJson {
-	return [NSDictionary dictionaryWithObjectsAndKeys:
-	name, @"name",
-	phone, @"phone",
-	email, @"email",
-	nil];
+    return [NSDictionary dictionaryWithObjectsAndKeys:
+    name, @"name",
+    phone, @"phone",
+    email, @"email",
+    nil];
  }
  @endcode
  
@@ -71,10 +71,10 @@
  */
 
 @interface SBJsonStreamWriter : NSObject {
-	NSString *error;
-	SBJsonStreamWriterState **states;
-	NSMutableData *data;
-	NSUInteger depth, maxDepth;
+    NSString *error;
+    SBJsonStreamWriterState **states;
+    NSMutableData *data;
+    NSUInteger depth, maxDepth;
     BOOL sortKeys, humanReadable;
 }
 

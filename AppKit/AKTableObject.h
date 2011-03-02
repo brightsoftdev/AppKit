@@ -10,12 +10,12 @@
 #import <UIKit/UIKit.h>
 
 @interface AKTableObject : NSObject {
-	BOOL _enabled;
+    BOOL _enabled;
 
-	id _delegate;
-	SEL _selector;
+    id _delegate;
+    SEL _selector;
 
-	UITableView *_tableView;
+    UITableView *_tableView;
 }
 
 @property (nonatomic, assign) BOOL enabled;

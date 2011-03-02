@@ -10,7 +10,7 @@
 #import "AKTableViewDataSource.h"
 
 @interface AKTableViewArrayDataSource : AKTableViewDataSource {
-	NSMutableArray *_items;
+    NSMutableArray *_items;
 }
 
 @property (nonatomic, retain) NSMutableArray *items;

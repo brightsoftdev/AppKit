@@ -11,8 +11,8 @@
 //#import <UIKit/UIKit.h>
 
 @interface AKTableViewController : AKBaseViewController {
-	UITableViewStyle _style;
-	UITableView *_tableView;
+    UITableViewStyle _style;
+    UITableView *_tableView;
 
     id <UITableViewDataSource> _dataSource;
     id <UITableViewDelegate> _delegate;

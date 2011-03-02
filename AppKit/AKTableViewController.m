@@ -18,7 +18,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         //NSLog(@"TVC initWithNibName");
-		self.style = UITableViewStylePlain;
+        self.style = UITableViewStylePlain;
         
     }
     return self;
@@ -28,7 +28,7 @@
     RELEASE(_tableView)
     RELEASE(_dataSource)
     RELEASE(_delegate)
-	[super dealloc];
+    [super dealloc];
 }
 
 - (void)setDataSource:(id <UITableViewDataSource>)value {
@@ -44,7 +44,7 @@
 }
 
 - (void)loadView {
-	[super loadView];
+    [super loadView];
 
     self.delegate = [[[AKTableViewDelegate alloc] init] autorelease];
     //self.dataSource = [[[AKTableViewGenericDataSource alloc] init] autorelease];

@@ -13,53 +13,53 @@
 @implementation AKTableViewDataSource
 
 - (AKTableObject *)tableView:(UITableView *)tableView objectForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return nil;//[[[XTableViewObject alloc] init] autorelease];
+    return nil;//[[[XTableViewObject alloc] init] autorelease];
 }
 
 - (NSIndexPath*)tableView:(UITableView*)tableView indexPathForObject:(id)object {
-	return nil;
+    return nil;
 }
 
 - (id)init {
-	if (self = [super init]) {
-		//
-		//NSLog(@"DataSource");
-	}
-	return self;
+    if (self = [super init]) {
+        //
+        //NSLog(@"DataSource");
+    }
+    return self;
 }
 /*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	if (self.items) {
-		<#statements#>
-	}
+    if (self.items) {
+        <#statements#>
+    }
 }
 */
 
 - (id <AKModelProtocol>) model{
-	return nil;
+    return nil;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return 0;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	//
-	AKTableObject *object = [self tableView:tableView objectForRowAtIndexPath:indexPath];
-	Class cellClass = [[object class] cellClass];
+    //
+    AKTableObject *object = [self tableView:tableView objectForRowAtIndexPath:indexPath];
+    Class cellClass = [[object class] cellClass];
 
-	NSString *identifier = NSStringFromClass(cellClass);
-	AKTableCell* cell = (AKTableCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
-	if (cell == nil) {
-		cell = [[[cellClass alloc] initWithStyle:UITableViewCellStyleDefault
-								 reuseIdentifier:identifier] autorelease];
-	}
-	
-	object.tableView = tableView;
-	cell.object = object;
-	//[self tableView:tableView cell:cell willAppearAtIndexPath:indexPath];
+    NSString *identifier = NSStringFromClass(cellClass);
+    AKTableCell* cell = (AKTableCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[[cellClass alloc] initWithStyle:UITableViewCellStyleDefault
+                                 reuseIdentifier:identifier] autorelease];
+    }
+    
+    object.tableView = tableView;
+    cell.object = object;
+    //[self tableView:tableView cell:cell willAppearAtIndexPath:indexPath];
 
-	return cell;
+    return cell;
 }
 
 @end

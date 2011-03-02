@@ -51,70 +51,70 @@ static SBJsonStreamWriterStateArrayValue *kSBJsonStreamWriterStateArrayValue;
 - (BOOL)expectingKey:(SBJsonStreamWriter*)writer { return NO; }
 - (void)transitionState:(SBJsonStreamWriter *)writer {}
 - (void)appendWhitespace:(SBJsonStreamWriter*)writer {
-	[writer.data appendBytes:"\n" length:1];
-	for (int i = 0; i < writer.depth; i++)
-	    [writer.data appendBytes:"  " length:2];
+    [writer.data appendBytes:"\n" length:1];
+    for (int i = 0; i < writer.depth; i++)
+        [writer.data appendBytes:"  " length:2];
 }
 @end
 
 @implementation SBJsonStreamWriterStateObjectStart
 - (void)transitionState:(SBJsonStreamWriter *)writer {
-	writer.states[writer.depth] = kSBJsonStreamWriterStateObjectValue;
+    writer.states[writer.depth] = kSBJsonStreamWriterStateObjectValue;
 }
 - (BOOL)expectingKey:(SBJsonStreamWriter *)writer {
-	writer.error = @"JSON object key must be string";
-	return YES;
+    writer.error = @"JSON object key must be string";
+    return YES;
 }
 @end
 
 @implementation SBJsonStreamWriterStateObjectKey
 - (void)appendSeparator:(SBJsonStreamWriter *)writer {
-	[writer.data appendBytes:"," length:1];
+    [writer.data appendBytes:"," length:1];
 }
 @end
 
 @implementation SBJsonStreamWriterStateObjectValue
 - (void)appendSeparator:(SBJsonStreamWriter *)writer {
-	[writer.data appendBytes:":" length:1];
+    [writer.data appendBytes:":" length:1];
 }
 - (void)transitionState:(SBJsonStreamWriter *)writer {
-	writer.states[writer.depth] = kSBJsonStreamWriterStateObjectKey;
+    writer.states[writer.depth] = kSBJsonStreamWriterStateObjectKey;
 }
 - (void)appendWhitespace:(SBJsonStreamWriter *)writer {
-	[writer.data appendBytes:" " length:1];
+    [writer.data appendBytes:" " length:1];
 }
 @end
 
 @implementation SBJsonStreamWriterStateArrayStart
 - (void)transitionState:(SBJsonStreamWriter *)writer {
-	writer.states[writer.depth] = kSBJsonStreamWriterStateArrayValue;
+    writer.states[writer.depth] = kSBJsonStreamWriterStateArrayValue;
 }
 @end
 
 @implementation SBJsonStreamWriterStateArrayValue
 - (void)appendSeparator:(SBJsonStreamWriter *)writer {
-	[writer.data appendBytes:"," length:1];
+    [writer.data appendBytes:"," length:1];
 }
 @end
 
 @implementation SBJsonStreamWriterStateStart
 
 + (id)sharedInstance {
-	if (!kSBJsonStreamWriterStateStart) {
-		kSBJsonStreamWriterStateStart = [SBJsonStreamWriterStateStart new];
-		kSBJsonStreamWriterStateComplete = [SBJsonStreamWriterStateComplete new];
-		kSBJsonStreamWriterStateError = [SBJsonStreamWriterStateError new];
-		kSBJsonStreamWriterStateObjectStart = [SBJsonStreamWriterStateObjectStart new];
-		kSBJsonStreamWriterStateObjectKey = [SBJsonStreamWriterStateObjectKey new];
-		kSBJsonStreamWriterStateObjectValue = [SBJsonStreamWriterStateObjectValue new];
-		kSBJsonStreamWriterStateArrayStart = [SBJsonStreamWriterStateArrayStart new];
-		kSBJsonStreamWriterStateArrayValue = [SBJsonStreamWriterStateArrayValue new];
-	}
-	return kSBJsonStreamWriterStateStart;
+    if (!kSBJsonStreamWriterStateStart) {
+        kSBJsonStreamWriterStateStart = [SBJsonStreamWriterStateStart new];
+        kSBJsonStreamWriterStateComplete = [SBJsonStreamWriterStateComplete new];
+        kSBJsonStreamWriterStateError = [SBJsonStreamWriterStateError new];
+        kSBJsonStreamWriterStateObjectStart = [SBJsonStreamWriterStateObjectStart new];
+        kSBJsonStreamWriterStateObjectKey = [SBJsonStreamWriterStateObjectKey new];
+        kSBJsonStreamWriterStateObjectValue = [SBJsonStreamWriterStateObjectValue new];
+        kSBJsonStreamWriterStateArrayStart = [SBJsonStreamWriterStateArrayStart new];
+        kSBJsonStreamWriterStateArrayValue = [SBJsonStreamWriterStateArrayValue new];
+    }
+    return kSBJsonStreamWriterStateStart;
 }
 
 - (void)transitionState:(SBJsonStreamWriter *)writer {
-	writer.states[writer.depth] = kSBJsonStreamWriterStateComplete;
+    writer.states[writer.depth] = kSBJsonStreamWriterStateComplete;
 }
 - (void)appendSeparator:(SBJsonStreamWriter *)writer {
 }
@@ -122,8 +122,8 @@ static SBJsonStreamWriterStateArrayValue *kSBJsonStreamWriterStateArrayValue;
 
 @implementation SBJsonStreamWriterStateComplete
 - (BOOL)isInvalidState:(SBJsonStreamWriter*)writer {
-	writer.error = @"Stream is closed";
-	return YES;
+    writer.error = @"Stream is closed";
+    return YES;
 }
 @end
 

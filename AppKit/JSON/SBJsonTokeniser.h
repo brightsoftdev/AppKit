@@ -33,30 +33,30 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-	sbjson_token_eof,
-	sbjson_token_error,
-	sbjson_token_object_start,
-	sbjson_token_key_value_separator,
-	sbjson_token_object_end,
-	sbjson_token_array_start,
-	sbjson_token_array_end,
-	sbjson_token_separator,
-	sbjson_token_string,
-	sbjson_token_string_encoded,	
-	sbjson_token_integer,
-	sbjson_token_double,
-	sbjson_token_true,
-	sbjson_token_false,
-	sbjson_token_null,
+    sbjson_token_eof,
+    sbjson_token_error,
+    sbjson_token_object_start,
+    sbjson_token_key_value_separator,
+    sbjson_token_object_end,
+    sbjson_token_array_start,
+    sbjson_token_array_end,
+    sbjson_token_separator,
+    sbjson_token_string,
+    sbjson_token_string_encoded,    
+    sbjson_token_integer,
+    sbjson_token_double,
+    sbjson_token_true,
+    sbjson_token_false,
+    sbjson_token_null,
 } sbjson_token_t;
 
 @interface SBJsonTokeniser : NSObject {
-	NSUInteger tokenStart, tokenLength;
-	NSMutableData *buf;
-	const char *bufbytes;
-	NSUInteger bufbytesLength;
-	NSString *error;
-	NSCharacterSet *illegalCharacterSet;
+    NSUInteger tokenStart, tokenLength;
+    NSMutableData *buf;
+    const char *bufbytes;
+    NSUInteger bufbytesLength;
+    NSString *error;
+    NSCharacterSet *illegalCharacterSet;
 }
 
 @property(copy, readonly) NSString *error;

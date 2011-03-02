@@ -43,11 +43,11 @@
 #pragma mark SBJsonStreamParserAdapterDelegate
 
 - (void)parser:(SBJsonStreamParser*)parser foundArray:(NSArray *)array {
-	value = [array retain];
+    value = [array retain];
 }
 
 - (void)parser:(SBJsonStreamParser*)parser foundObject:(NSDictionary *)dict {
-	value = [dict retain];
+    value = [dict retain];
 }
 
 - (id)init {
@@ -71,49 +71,49 @@
         return nil;
     }
 
-	SBJsonStreamParserAdapter *adapter = [SBJsonStreamParserAdapter new];
-	adapter.delegate =  self;
-	
-	SBJsonStreamParser *parser = [SBJsonStreamParser new];
-	parser.maxDepth = self.maxDepth;
-	parser.delegate = adapter;
-	
-	id retval = nil;
-	switch ([parser parse:data]) {
-		case SBJsonStreamParserComplete:
-			retval = [value autorelease];
-			break;
-			
-		case SBJsonStreamParserWaitingForData:
-		    self.error = @"Didn't find full object before EOF";
-			break;
+    SBJsonStreamParserAdapter *adapter = [SBJsonStreamParserAdapter new];
+    adapter.delegate =  self;
+    
+    SBJsonStreamParser *parser = [SBJsonStreamParser new];
+    parser.maxDepth = self.maxDepth;
+    parser.delegate = adapter;
+    
+    id retval = nil;
+    switch ([parser parse:data]) {
+        case SBJsonStreamParserComplete:
+            retval = [value autorelease];
+            break;
+            
+        case SBJsonStreamParserWaitingForData:
+            self.error = @"Didn't find full object before EOF";
+            break;
 
-		case SBJsonStreamParserError:
-		    self.error = parser.error;
-			break;
-	}
-	
+        case SBJsonStreamParserError:
+            self.error = parser.error;
+            break;
+    }
+    
 
-	[adapter release];
-	[parser release];
-	
-	return retval;
+    [adapter release];
+    [parser release];
+    
+    return retval;
 }
 
 - (id)objectWithString:(NSString *)repr {
-	return [self objectWithData:[repr dataUsingEncoding:NSUTF8StringEncoding]];
+    return [self objectWithData:[repr dataUsingEncoding:NSUTF8StringEncoding]];
 }
 
 - (id)objectWithString:(NSString*)repr error:(NSError**)error_ {
-	id tmp = [self objectWithString:repr];
+    id tmp = [self objectWithString:repr];
     if (tmp)
         return tmp;
     
     if (error_) {
-		NSDictionary *ui = [NSDictionary dictionaryWithObjectsAndKeys:error, NSLocalizedDescriptionKey, nil];
+        NSDictionary *ui = [NSDictionary dictionaryWithObjectsAndKeys:error, NSLocalizedDescriptionKey, nil];
         *error_ = [NSError errorWithDomain:@"org.brautaset.json.parser.ErrorDomain" code:0 userInfo:ui];
-	}
-	
+    }
+    
     return nil;
 }
 

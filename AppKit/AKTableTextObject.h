@@ -11,7 +11,7 @@
 
 
 @interface AKTableTextObject : AKTableObject {
-	NSString *_text;
+    NSString *_text;
 }
 
 @property (nonatomic, copy) NSString *text;

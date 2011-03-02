@@ -10,9 +10,9 @@
 #import "AKTableViewDataSource.h"
 
 @interface AKTableViewGenericDataSource : AKTableViewDataSource {
-	NSMutableArray *_sectionTitles;
-	NSMutableArray *_sectionFooters;
-	NSMutableArray *_items;
+    NSMutableArray *_sectionTitles;
+    NSMutableArray *_sectionFooters;
+    NSMutableArray *_items;
 }
 
 @property (nonatomic, retain) NSMutableArray *sectionTitles;

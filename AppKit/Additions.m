@@ -41,7 +41,7 @@
 
 
 - (CGFloat)width {
-	return self.frame.size.width;
+    return self.frame.size.width;
 }
 
 - (void)setWidth:(CGFloat)value {
@@ -49,7 +49,7 @@
 }
 
 - (CGFloat)height {
-	return self.frame.size.height;
+    return self.frame.size.height;
 }
 
 - (void)setHeight:(CGFloat)value {
@@ -58,16 +58,16 @@
 
 /*
 - (void)setWidth:(CGFloat)value {
-	//
+    //
 }
 */
 
 - (CGPoint)origin {
-	return self.frame.origin;
+    return self.frame.origin;
 }
 
 - (void)setOrigin:(CGPoint)point {
-	//self.frame = CGRectMake(point.x, point.y, self., <#CGFloat height#>)
+    //self.frame = CGRectMake(point.x, point.y, self., <#CGFloat height#>)
 }
 
 @end
@@ -87,7 +87,7 @@
 
 - (UIViewController *)push {
     [[AKNavigationController shared] pushViewController:self animated:YES];
-    return self;	
+    return self;    
 }
 
 @end
@@ -99,7 +99,7 @@
 
 @implementation UITextField (Additions)
 + (Class)cellClass {
-	return [AKTableViewControlCell class];
+    return [AKTableViewControlCell class];
 }
 @end
 
@@ -111,19 +111,19 @@
 @implementation UIAlertView (Additions)
 
 + (UIAlertView *)alertWithMessage:(NSString *)message {
-	UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:AKBundleDisplayName()
-														 message:message
-														delegate:nil
-											   cancelButtonTitle:nil
-											   otherButtonTitles:@"OK", nil] autorelease];
-	//[alertView show];
-	return alertView;
+    UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:AKBundleDisplayName()
+                                                         message:message
+                                                        delegate:nil
+                                               cancelButtonTitle:nil
+                                               otherButtonTitles:@"OK", nil] autorelease];
+    //[alertView show];
+    return alertView;
 }
 
 + (UIAlertView *)showAlertWithMessage:(NSString *)message {
-	UIAlertView *alertView = [self alertWithMessage:message];
-	[alertView show];
-	return alertView;
+    UIAlertView *alertView = [self alertWithMessage:message];
+    [alertView show];
+    return alertView;
 }
 
 @end

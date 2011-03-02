@@ -17,13 +17,13 @@
 @synthesize overlayView = _overlayView;
 
 - (void)loadView {
-	// do nothing, well we should set the self.view
-	UIView *v = [[[UIView alloc] init] autorelease];
-	v.backgroundColor = [UIColor whiteColor];
-	//v.layer.borderColor = [UIColor greenColor].CGColor;
-	//v.layer.borderWidth = 6.0;
+    // do nothing, well we should set the self.view
+    UIView *v = [[[UIView alloc] init] autorelease];
+    v.backgroundColor = [UIColor whiteColor];
+    //v.layer.borderColor = [UIColor greenColor].CGColor;
+    //v.layer.borderWidth = 6.0;
 
-	self.view = v;
+    self.view = v;
 }
 
 - (void)setOverlayView:(UIView *)value {

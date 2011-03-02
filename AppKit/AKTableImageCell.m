@@ -19,8 +19,8 @@
 }
 
 - (void)setObject:(AKTableImageObject *)object {
-	[super setObject:object];
-	self.textLabel.text = object.imageURL;
+    [super setObject:object];
+    self.textLabel.text = object.imageURL;
     self.imageView2.imageURL = object.imageURL;
 }
 

@@ -52,8 +52,8 @@
  */
 
 @interface SBJsonParser : NSObject {
-	id value;
-	NSString *error;
+    id value;
+    NSString *error;
     NSUInteger depth, maxDepth;
 
 }

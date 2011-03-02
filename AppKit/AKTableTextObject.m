@@ -15,15 +15,15 @@
 @synthesize text = _text;
 
 + (Class)cellClass {
-	return [AKTableTextCell class];
+    return [AKTableTextCell class];
 }
 
 + (id)itemWithText:(NSString *)text {
-	AKTableTextObject *object = [[[[self class] alloc] init] autorelease];
-	if (object) {
+    AKTableTextObject *object = [[[[self class] alloc] init] autorelease];
+    if (object) {
         object.text = text;
     }
-	return object;
+    return object;
 }
 
 +  (id)itemWithText:(NSString *)text delegate:(id)delegate selector:(SEL)selector {
@@ -36,8 +36,8 @@
 }
 
 - (void)dealloc {
-	RELEASE(_text);
-	[super dealloc];
+    RELEASE(_text);
+    [super dealloc];
 }
 
 @end

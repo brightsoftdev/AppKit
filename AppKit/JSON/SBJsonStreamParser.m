@@ -47,248 +47,248 @@
 #pragma mark Housekeeping
 
 - (id)init {
-	self = [super init];
-	if (self) {
-		tokeniser = [SBJsonTokeniser new];
-		maxDepth = 512;
-		states = calloc(maxDepth, sizeof(SBJsonStreamParserState*));
-		NSAssert(states, @"States not initialised");
-		states[0] = [SBJsonStreamParserStateStart sharedInstance];
-	}
-	return self;
+    self = [super init];
+    if (self) {
+        tokeniser = [SBJsonTokeniser new];
+        maxDepth = 512;
+        states = calloc(maxDepth, sizeof(SBJsonStreamParserState*));
+        NSAssert(states, @"States not initialised");
+        states[0] = [SBJsonStreamParserStateStart sharedInstance];
+    }
+    return self;
 }
 
 - (void)dealloc {
-	self.error = nil;
-	free(states);
-	[tokeniser release];
-	[super dealloc];
+    self.error = nil;
+    free(states);
+    [tokeniser release];
+    [super dealloc];
 }
 
 #pragma mark Methods
 
 - (NSString*)tokenName:(sbjson_token_t)token {
-	switch (token) {
-		case sbjson_token_array_start:
-			return @"start of array";
-			break;
-			
-		case sbjson_token_array_end:
-			return @"end of array";
-			break;
-			
-		case sbjson_token_double:
-		case sbjson_token_integer:
-			return @"number";
-			break;
-			
-		case sbjson_token_string:
-		case sbjson_token_string_encoded:
-			return @"string";
-			break;
-			
-		case sbjson_token_true:
-		case sbjson_token_false:
-			return @"boolean";
-			break;
-			
-		case sbjson_token_null:
-			return @"null";
-			break;
-			
-		case sbjson_token_key_value_separator:
-			return @"key-value separator";
-			break;
-			
-		case sbjson_token_separator:
-			return @"value separator";
-			break;
-			
-		case sbjson_token_object_start:
-			return @"start of object";
-			break;
-			
-		case sbjson_token_object_end:
-			return @"end of object";
-			break;
-			
-		case sbjson_token_eof:
-		case sbjson_token_error:
-			break;
-	}
-	NSAssert(NO, @"Should not get here");
-	return @"<aaiiie!>";
+    switch (token) {
+        case sbjson_token_array_start:
+            return @"start of array";
+            break;
+            
+        case sbjson_token_array_end:
+            return @"end of array";
+            break;
+            
+        case sbjson_token_double:
+        case sbjson_token_integer:
+            return @"number";
+            break;
+            
+        case sbjson_token_string:
+        case sbjson_token_string_encoded:
+            return @"string";
+            break;
+            
+        case sbjson_token_true:
+        case sbjson_token_false:
+            return @"boolean";
+            break;
+            
+        case sbjson_token_null:
+            return @"null";
+            break;
+            
+        case sbjson_token_key_value_separator:
+            return @"key-value separator";
+            break;
+            
+        case sbjson_token_separator:
+            return @"value separator";
+            break;
+            
+        case sbjson_token_object_start:
+            return @"start of object";
+            break;
+            
+        case sbjson_token_object_end:
+            return @"end of object";
+            break;
+            
+        case sbjson_token_eof:
+        case sbjson_token_error:
+            break;
+    }
+    NSAssert(NO, @"Should not get here");
+    return @"<aaiiie!>";
 }
 
 
 - (void)handleObjectStart {
-	if (depth >= maxDepth) {
-		self.error = [NSString stringWithFormat:@"Parser exceeded max depth of %lu", maxDepth];
-		states[depth] = kSBJsonStreamParserStateError;
-		
-	} else {
-		[delegate parserFoundObjectStart:self];
-		states[++depth] = kSBJsonStreamParserStateObjectStart;
-	}
-	
+    if (depth >= maxDepth) {
+        self.error = [NSString stringWithFormat:@"Parser exceeded max depth of %lu", maxDepth];
+        states[depth] = kSBJsonStreamParserStateError;
+        
+    } else {
+        [delegate parserFoundObjectStart:self];
+        states[++depth] = kSBJsonStreamParserStateObjectStart;
+    }
+    
 }
 - (void)handleArrayStart {
-	if (depth >= maxDepth) {
-		self.error = [NSString stringWithFormat:@"Parser exceeded max depth of %lu", maxDepth];
-		states[depth] = kSBJsonStreamParserStateError;
-	} else {
-		[delegate parserFoundArrayStart:self];
-		states[++depth] = kSBJsonStreamParserStateArrayStart;
-	}
-	
+    if (depth >= maxDepth) {
+        self.error = [NSString stringWithFormat:@"Parser exceeded max depth of %lu", maxDepth];
+        states[depth] = kSBJsonStreamParserStateError;
+    } else {
+        [delegate parserFoundArrayStart:self];
+        states[++depth] = kSBJsonStreamParserStateArrayStart;
+    }
+    
 }
 
 - (void)handleNumber:(sbjson_token_t)tok {
-	const char *buf;
-	NSUInteger len;
-	
-	if ([tokeniser getToken:&buf length:&len]) {
-		NSNumber *number;
-		if (tok == sbjson_token_integer && len < 12) {
-			char *e = NULL;
-			long l = strtol(buf, &e, 0);
-			NSAssert((e-buf) == len, @"unexpected length");
-			number = [NSNumber numberWithLong:l];
-			
-		} else if (tok == sbjson_token_double && len < 7) {
-			char *e = NULL;
-			double d = strtod(buf, &e);
-			NSAssert((e-buf) == len, @"unexpected length");
-			number = [NSNumber numberWithDouble:d];
-			
-		} else {
-			NSData *data = [NSData dataWithBytes:buf length:len];
-			NSString *string = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
-			number = [[[NSDecimalNumber alloc] initWithString:string] autorelease];
-		}
-		NSParameterAssert(number);
-		[delegate parser:self foundNumber:number];
-		
-	}
-}	
+    const char *buf;
+    NSUInteger len;
+    
+    if ([tokeniser getToken:&buf length:&len]) {
+        NSNumber *number;
+        if (tok == sbjson_token_integer && len < 12) {
+            char *e = NULL;
+            long l = strtol(buf, &e, 0);
+            NSAssert((e-buf) == len, @"unexpected length");
+            number = [NSNumber numberWithLong:l];
+            
+        } else if (tok == sbjson_token_double && len < 7) {
+            char *e = NULL;
+            double d = strtod(buf, &e);
+            NSAssert((e-buf) == len, @"unexpected length");
+            number = [NSNumber numberWithDouble:d];
+            
+        } else {
+            NSData *data = [NSData dataWithBytes:buf length:len];
+            NSString *string = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+            number = [[[NSDecimalNumber alloc] initWithString:string] autorelease];
+        }
+        NSParameterAssert(number);
+        [delegate parser:self foundNumber:number];
+        
+    }
+}    
 
 - (void)handleString:(sbjson_token_t)tok {
-	const char *buf;
-	NSUInteger len;
-	
-	NSString *string;
-	if (tok == sbjson_token_string) {
-		[tokeniser getToken:&buf length:&len];
-		string = [[[NSString alloc] initWithBytes:buf+1 length:len-2 encoding:NSUTF8StringEncoding] autorelease];
-	} else {
-		string = [tokeniser getDecodedStringToken];
-	}
-	NSParameterAssert(string);
-	if ([states[depth] needKey])
-		[delegate parser:self foundObjectKey:string];
-	else
-		[delegate parser:self foundString:string];
-}	
+    const char *buf;
+    NSUInteger len;
+    
+    NSString *string;
+    if (tok == sbjson_token_string) {
+        [tokeniser getToken:&buf length:&len];
+        string = [[[NSString alloc] initWithBytes:buf+1 length:len-2 encoding:NSUTF8StringEncoding] autorelease];
+    } else {
+        string = [tokeniser getDecodedStringToken];
+    }
+    NSParameterAssert(string);
+    if ([states[depth] needKey])
+        [delegate parser:self foundObjectKey:string];
+    else
+        [delegate parser:self foundString:string];
+}    
 
 - (SBJsonStreamParserStatus)parse:(NSData *)data_ {
-	[tokeniser appendData:data_];
-	
-	
-	for (;;) {		
-		if ([states[depth] parserShouldStop:self])
-			return [states[depth] parserShouldReturn:self];
-		
-		sbjson_token_t tok = [tokeniser next];
-		
-		switch (tok) {
-			case sbjson_token_eof:
-				return SBJsonStreamParserWaitingForData;
-				break;
-				
-			case sbjson_token_error:
-				states[depth] = kSBJsonStreamParserStateError;
-				self.error = tokeniser.error;
-				return SBJsonStreamParserError;
-				break;
-				
-			default:
-				
-				if (![states[depth] parser:self shouldAcceptToken:tok]) {
-					NSString *tokenName = [self tokenName:tok];
-					NSString *stateName = [states[depth] name];
-					NSLog(@"STATE: %@", states[depth]);
-					self.error = [NSString stringWithFormat:@"Token '%@' not expected %@", tokenName, stateName];
-					states[depth] = kSBJsonStreamParserStateError;
-					return SBJsonStreamParserError;
-				}
-				
-				switch (tok) {
-					case sbjson_token_object_start:
-						[self handleObjectStart];						
-						break;
-						
-					case sbjson_token_object_end:
-						[states[--depth] parser:self shouldTransitionTo:tok];
-						[delegate parserFoundObjectEnd:self];
-						break;
-						
-					case sbjson_token_array_start:
-						[self handleArrayStart];
-						break;
-						
-					case sbjson_token_array_end:
-						[states[--depth] parser:self shouldTransitionTo:tok];
-						[delegate parserFoundArrayEnd:self];
-						break;
-						
-					case sbjson_token_separator:
-					case sbjson_token_key_value_separator:
-						[states[depth] parser:self shouldTransitionTo:tok];
-						break;
-						
-					case sbjson_token_true:
-						[delegate parser:self foundBoolean:YES];
-						[states[depth] parser:self shouldTransitionTo:tok];
-						break;
-						
-					case sbjson_token_false:
-						[delegate parser:self foundBoolean:NO];
-						[states[depth] parser:self shouldTransitionTo:tok];
-						break;
-						
-					case sbjson_token_null:
-						[delegate parserFoundNull:self];
-						[states[depth] parser:self shouldTransitionTo:tok];
-						break;
-						
-					case sbjson_token_integer:
-					case sbjson_token_double:
-						[self handleNumber:tok];
-						[states[depth] parser:self shouldTransitionTo:tok];
-						break;
-						
-					case sbjson_token_string:
-					case sbjson_token_string_encoded:
-						[self handleString:tok];
-						[states[depth] parser:self shouldTransitionTo:tok];
-						break;
-						
-					default:
-						break;
-				}
-				break;
-		}
-	}
-	return SBJsonStreamParserComplete;
+    [tokeniser appendData:data_];
+    
+    
+    for (;;) {        
+        if ([states[depth] parserShouldStop:self])
+            return [states[depth] parserShouldReturn:self];
+        
+        sbjson_token_t tok = [tokeniser next];
+        
+        switch (tok) {
+            case sbjson_token_eof:
+                return SBJsonStreamParserWaitingForData;
+                break;
+                
+            case sbjson_token_error:
+                states[depth] = kSBJsonStreamParserStateError;
+                self.error = tokeniser.error;
+                return SBJsonStreamParserError;
+                break;
+                
+            default:
+                
+                if (![states[depth] parser:self shouldAcceptToken:tok]) {
+                    NSString *tokenName = [self tokenName:tok];
+                    NSString *stateName = [states[depth] name];
+                    NSLog(@"STATE: %@", states[depth]);
+                    self.error = [NSString stringWithFormat:@"Token '%@' not expected %@", tokenName, stateName];
+                    states[depth] = kSBJsonStreamParserStateError;
+                    return SBJsonStreamParserError;
+                }
+                
+                switch (tok) {
+                    case sbjson_token_object_start:
+                        [self handleObjectStart];                        
+                        break;
+                        
+                    case sbjson_token_object_end:
+                        [states[--depth] parser:self shouldTransitionTo:tok];
+                        [delegate parserFoundObjectEnd:self];
+                        break;
+                        
+                    case sbjson_token_array_start:
+                        [self handleArrayStart];
+                        break;
+                        
+                    case sbjson_token_array_end:
+                        [states[--depth] parser:self shouldTransitionTo:tok];
+                        [delegate parserFoundArrayEnd:self];
+                        break;
+                        
+                    case sbjson_token_separator:
+                    case sbjson_token_key_value_separator:
+                        [states[depth] parser:self shouldTransitionTo:tok];
+                        break;
+                        
+                    case sbjson_token_true:
+                        [delegate parser:self foundBoolean:YES];
+                        [states[depth] parser:self shouldTransitionTo:tok];
+                        break;
+                        
+                    case sbjson_token_false:
+                        [delegate parser:self foundBoolean:NO];
+                        [states[depth] parser:self shouldTransitionTo:tok];
+                        break;
+                        
+                    case sbjson_token_null:
+                        [delegate parserFoundNull:self];
+                        [states[depth] parser:self shouldTransitionTo:tok];
+                        break;
+                        
+                    case sbjson_token_integer:
+                    case sbjson_token_double:
+                        [self handleNumber:tok];
+                        [states[depth] parser:self shouldTransitionTo:tok];
+                        break;
+                        
+                    case sbjson_token_string:
+                    case sbjson_token_string_encoded:
+                        [self handleString:tok];
+                        [states[depth] parser:self shouldTransitionTo:tok];
+                        break;
+                        
+                    default:
+                        break;
+                }
+                break;
+        }
+    }
+    return SBJsonStreamParserComplete;
 }
 
 #pragma mark Private methods
 
 - (void)setMaxDepth:(NSUInteger)x {
-	NSAssert(x, @"maxDepth must be greater than 0");
-	maxDepth = x;
-	states = realloc(states, x);
-	NSAssert(states, @"Failed to reallocate more memory for states");
+    NSAssert(x, @"maxDepth must be greater than 0");
+    maxDepth = x;
+    states = realloc(states, x);
+    NSAssert(states, @"Failed to reallocate more memory for states");
 }
 
 @end

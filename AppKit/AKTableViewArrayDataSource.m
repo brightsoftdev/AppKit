@@ -14,16 +14,16 @@
 @synthesize items = _items;
 
 - (void)dealloc {
-	RELEASE(_items);
-	[super dealloc];
+    RELEASE(_items);
+    [super dealloc];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return _items.count;
+    return _items.count;
 }
 
 - (AKTableObject *)tableView:(UITableView *)tableView objectForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return [_items objectAtIndex:indexPath.row];
+    return [_items objectAtIndex:indexPath.row];
 }
 
 @end

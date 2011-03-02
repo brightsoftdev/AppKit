@@ -14,7 +14,7 @@
 @synthesize imageURL = _imageURL;
 
 + (Class)cellClass {
-	return [AKTableImageCell class];
+    return [AKTableImageCell class];
 }
 
 - (void)dealloc {

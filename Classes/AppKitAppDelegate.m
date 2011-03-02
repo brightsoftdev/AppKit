@@ -22,8 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
     //[AKWebController push];
-	[[[[AKWebController alloc] initWithURL:@"http://www.google.com"] autorelease] push];
-	//[[AKWebController alloc] initWithURL:@""];
+    [[[[AKWebController alloc] initWithURL:@"http://www.google.com"] autorelease] push];
+    //[[AKWebController alloc] initWithURL:@""];
 
     return YES;
 }
@@ -78,8 +78,8 @@
 
 
 - (void)dealloc {
-	//RELEASE(_window);
-	//RELEASE(_navigationController);
+    //RELEASE(_window);
+    //RELEASE(_navigationController);
     [super dealloc];
 }
 
@@ -88,23 +88,23 @@
 #pragma mark lazy
 /*
 - (UIWindow *)window {
-	if (!_window) {
-		_window = [[UIWindow alloc] initWithFrame:AKScreenBounds()];
-		_window.backgroundColor = [UIColor blackColor];
-		//_window.layer.borderColor = [UIColor blueColor].CGColor;
-		//_window.layer.borderWidth = 2.0;
-	}
-	return _window;
+    if (!_window) {
+        _window = [[UIWindow alloc] initWithFrame:AKScreenBounds()];
+        _window.backgroundColor = [UIColor blackColor];
+        //_window.layer.borderColor = [UIColor blueColor].CGColor;
+        //_window.layer.borderWidth = 2.0;
+    }
+    return _window;
 }
 */
 /*
 - (UINavigationController *)navigationController {
-	if (!_navigationController) {
-		TestController1 *controller = [[[TestController1 alloc] init] autorelease];
-		_navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
+    if (!_navigationController) {
+        TestController1 *controller = [[[TestController1 alloc] init] autorelease];
+        _navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
 
-	}
-	return _navigationController;
+    }
+    return _navigationController;
 }
 */
 

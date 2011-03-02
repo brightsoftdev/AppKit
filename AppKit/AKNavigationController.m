@@ -53,13 +53,13 @@
 #pragma mark lazy
 
 - (UIWindow *)window {
-	if (!_window) {
-		_window = [[UIWindow alloc] initWithFrame:AKScreenBounds()];
-		_window.backgroundColor = [UIColor blackColor];
-		//_window.layer.borderColor = [UIColor blueColor].CGColor;
-		//_window.layer.borderWidth = 2.0;
-	}
-	return _window;
+    if (!_window) {
+        _window = [[UIWindow alloc] initWithFrame:AKScreenBounds()];
+        _window.backgroundColor = [UIColor blackColor];
+        //_window.layer.borderColor = [UIColor blueColor].CGColor;
+        //_window.layer.borderWidth = 2.0;
+    }
+    return _window;
 }
 
 

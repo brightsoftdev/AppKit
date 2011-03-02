@@ -10,8 +10,8 @@
 #import <UIKit/UIKit.h>
 
 @interface AKTableCell : UITableViewCell {
-	id _object;
-	BOOL _enabled;
+    id _object;
+    BOOL _enabled;
 }
 
 @property (nonatomic, retain) id object;

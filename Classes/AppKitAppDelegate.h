@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface AppKitAppDelegate : NSObject <UIApplicationDelegate> {
-	//UIWindow *_window;
-	//UINavigationController *_navigationController;
+    //UIWindow *_window;
+    //UINavigationController *_navigationController;
 }
 
 //@property (nonatomic, retain) UIWindow *window;

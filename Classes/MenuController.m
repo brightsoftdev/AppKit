@@ -28,7 +28,7 @@
 }
 
 - (void)objectAction:(AKTableTextObject *)tableObject {
-	[UIAlertView showAlertWithMessage:@"You tapped me !"];
+    [UIAlertView showAlertWithMessage:@"You tapped me !"];
 }
 
 
@@ -37,8 +37,8 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nil bundle:nil]) {
-		self.title = @"Sample App";
-		self.style = UITableViewStyleGrouped;
+        self.title = @"Sample App";
+        self.style = UITableViewStyleGrouped;
 
     }
     return self;
@@ -78,13 +78,13 @@
 }
 
 - (void)loadView {
-	[super loadView];
+    [super loadView];
     [self prepareDataSource];
 
-	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Next"
-																			   style:UIBarButtonItemStylePlain 
-																			  target:self
-																			  action:@selector(nextAction:)] autorelease];
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Next"
+                                                                               style:UIBarButtonItemStylePlain 
+                                                                              target:self
+                                                                              action:@selector(nextAction:)] autorelease];
 }
 
 @end

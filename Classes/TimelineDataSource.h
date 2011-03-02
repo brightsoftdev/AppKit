@@ -10,7 +10,7 @@
 #import "PublicTimelineModel.h"
 
 @interface TimelineDataSource : AKTableViewGenericDataSource <AKModelProtocol> {
-	PublicTimelineModel *_publicTimelineModel;
+    PublicTimelineModel *_publicTimelineModel;
 }
 
 @end
