@@ -45,7 +45,7 @@
 }
 
 - (void)prepareDataSource {
-    AKTableViewGenericDataSource *dataSource = self.dataSource;
+    AKTableViewGenericDataSource *dataSource = [[[AKTableViewGenericDataSource alloc] init] autorelease];
 
     dataSource.sectionTitles = [NSArray arrayWithObjects:
                                 @"Network",
@@ -75,6 +75,8 @@
 
                         [AKTableTextObject itemWithText:@"Next" delegate:self selector:@selector(nextAction:)],
                         nil];
+
+    self.dataSource = dataSource;
 }
 
 - (void)loadView {

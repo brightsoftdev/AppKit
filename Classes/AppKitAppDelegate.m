@@ -22,7 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
     //[AKWebController push];
-    [[[[AKWebController alloc] initWithURL:@"http://www.google.com"] autorelease] push];
+    [MenuController push];
+    //[[[[AKWebController alloc] initWithURL:@"http://www.google.com"] autorelease] push];
     //[[AKWebController alloc] initWithURL:@""];
 
     return YES;
