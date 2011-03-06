@@ -1,0 +1,15 @@
+/* 
+   Localizable.strings
+   AppKit
+
+   Created by Hiroshi Horie on 11/03/05.
+   Copyright 2011 AppAge Limited. All rights reserved.
+ */
+
+
+// General
+"Cancel" = "キャンセル";
+"Loading..." = "読み込み中...";
+
+// WebController
+"Open in Safari" = "Safariで開く";
