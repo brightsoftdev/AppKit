@@ -16,6 +16,7 @@
     static AKNavigationController *instance = NULL;
     if (!instance) {
         instance = [[self alloc] initWithNibName:nil bundle:nil];
+        instance.toolbarHidden = NO;
     }
     return instance;
 }

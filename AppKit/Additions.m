@@ -79,7 +79,7 @@
 
 @implementation UIViewController (Additions)
 + (UIViewController *)push {
-    AKBaseViewController *controller = [[self alloc] initWithNibName:nil bundle:nil];
+    AKBaseViewController *controller = [[[self alloc] initWithNibName:nil bundle:nil] autorelease];
     [[AKNavigationController shared] pushViewController:controller animated:YES];
     
     return controller;

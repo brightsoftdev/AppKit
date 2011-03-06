@@ -12,8 +12,6 @@
 
 @interface AKWebController()
 - (UIBarButtonItem *)flexibleSpace;
-//- (void)setDefaultToolbarItems;
-//- (void)setLoadingToolbarItems;
 - (UIActionSheet *)otherActionSheet;
 @end
 
@@ -85,18 +83,17 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     self.title = LOCSTR(@"Loading...");
-    
-    [_dynamicToolbarItems replaceObjectAtIndex:5
+
+    [_webToolbarItems replaceObjectAtIndex:5
                                     withObject:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop
                                                                                               target:self
                                                                                               action:@selector(stopAction:)] autorelease]];
-    
     [self setToolbarItems:nil];
-    [self setToolbarItems:_dynamicToolbarItems];
-
+    [self setToolbarItems:_webToolbarItems];
+    
     _backButton.enabled = NO;
     _forwardButton.enabled = NO;
-    
+
     AKNetworkRequestStarted();
 }
 
@@ -108,15 +105,14 @@
 
     _backButton.enabled = _webView.canGoBack;
     _forwardButton.enabled = _webView.canGoForward;
-    
-    [_dynamicToolbarItems replaceObjectAtIndex:5
+
+    [_webToolbarItems replaceObjectAtIndex:5
                                     withObject:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
                                                                                               target:self
                                                                                               action:@selector(refreshAction:)] autorelease]];
-
     [self setToolbarItems:nil];
-    [self setToolbarItems:_dynamicToolbarItems];
-
+    [self setToolbarItems:_webToolbarItems];
+    
     AKNetworkRequestStopped();
 }
 
@@ -133,7 +129,7 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        
+/*
         _backButton = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"]
                                                         style:UIBarButtonItemStylePlain 
                                                        target:self
@@ -159,6 +155,43 @@
                                                                                action:@selector(otherAction:)] autorelease],
                                 [self flexibleSpace],
                                 nil];
+ 
+*/
+        //NSLog(@"called");
+        
+        //self.hidesBottomBarWhenPushed = NO;
+        //[self.navigationController setToolbarHidden:NO animated:NO];
+        
+        //self.navigationController.toolbarHidden = NO;
+        
+        _backButton = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"]
+                                                        style:UIBarButtonItemStylePlain 
+                                                       target:self
+                                                       action:@selector(backAction:)] autorelease];
+
+        _forwardButton = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"forward"]
+                                                           style:UIBarButtonItemStylePlain 
+                                                          target:self
+                                                          action:@selector(forwardAction:)] autorelease];
+        _webToolbarItems = [[NSMutableArray alloc] initWithObjects:
+                            [self flexibleSpace],
+                            _backButton,
+                            [self flexibleSpace],
+                            _forwardButton,
+                            [self flexibleSpace],
+                            [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+                                                                           target:self
+                                                                           action:@selector(refreshAction:)] autorelease],
+                            
+                            [self flexibleSpace],
+                            [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                                                           target:self
+                                                                           action:@selector(otherAction:)] autorelease],
+                            [self flexibleSpace],
+                            nil];
+        
+        self.toolbarItems = _webToolbarItems;
+        
     }
     return self;
 }
@@ -175,6 +208,11 @@
 // --------------------------------------------------
 
 - (void)dealloc {
+
+    if (_webView.loading) {
+        AKNetworkRequestStopped();
+    }
+
     _webView.delegate = nil;
     RELEASE(_dynamicToolbarItems)
     RELEASE(_initialURL)
@@ -196,7 +234,50 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //[self setToolbarItems:_dynamicToolbarItems];
-    [self.navigationController setToolbarHidden:NO];
+/*
+    NSArray *toolbarItems_ = [NSArray arrayWithObjects:
+                              [[[UIBarButtonItem alloc] initWithTitle:@"WebController" style:UIBarButtonItemStylePlain target:nil action:nil] autorelease],
+                              [[[UIBarButtonItem alloc] initWithTitle:@"WebController" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease],
+                              nil];
+    [self setToolbarItems:toolbarItems_ animated:YES];
+*/
+}
+
+
+// --------------------------------------------------
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+/*
+    NSArray *toolbarItems = [NSArray arrayWithObjects:
+                             [[[UIBarButtonItem alloc] initWithTitle:@"MenuController" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease],
+                             nil];
+    [self setToolbarItems:toolbarItems animated:YES];
+	[self.navigationController setToolbarHidden:NO animated:YES];
+*/
+
+//	[self.navigationController setToolbarHidden:NO animated:YES];
+    
+	//self.navigationController.toolbar.barStyle = UIBarStyleBlackTranslucent;
+	//self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+}
+
+// --------------------------------------------------
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+	//[self.navigationController setToolbarHidden:YES animated:YES];
+	//self.navigationController.toolbar.barStyle = UIBarStyleBlack;
+	//self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    
 }
 
 // --------------------------------------------------

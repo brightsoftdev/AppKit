@@ -30,6 +30,9 @@
 // WebController
 #import "AKWebController.h"
 
+// MapController
+#import "AKMapController.h"
+
 // ViewController
 #import "AKBaseViewController.h"
 #import "AKTableViewController.h"
