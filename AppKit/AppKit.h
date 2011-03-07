@@ -48,4 +48,7 @@
 #import "AKTableTextObject.h"
 #import "AKTableImageObject.h"
 
+#import "AKTableColumnObject.h"
+#import "AKTableColumnCell.h"
+
 #import "JSON/JSON.h"

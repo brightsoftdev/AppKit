@@ -66,11 +66,13 @@
 
     dataSource.sectionTitles = [NSArray arrayWithObjects:
                                 @"Built-in Controllers",
+                                @"",
                                 @"Network",
                                 @"Some section title",
                                 nil];
 
     dataSource.sectionFooters = [NSArray arrayWithObjects:
+                                 @"",
                                  @"",
                                  @"",
                                  @"This is some footer string. This is some footer string. This is some footer string.",
@@ -83,6 +85,8 @@
                          [AKTableTextObject itemWithText:@"AKWebController" delegate:self selector:@selector(webControllerAction:)],
                          [AKTableTextObject itemWithText:@"AKMapController" delegate:self selector:@selector(mapControllerAction:)],
                          nil],
+                        
+                        [[[AKTableColumnObject alloc] init] autorelease],
 
                         [NSArray arrayWithObjects:
                          [AKTableTextObject itemWithText:@"Twitter Sample" delegate:self selector:@selector(twitterAction:)],
