@@ -21,7 +21,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
     AKTableViewDataSource *dataSource = tableView.dataSource;
     id object = [dataSource tableView:tableView objectForRowAtIndexPath:indexPath];
     if ([object isKindOfClass:[AKTableObject class]]) {
@@ -32,5 +31,10 @@
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
+/*
+- (void)tableView:(UITableView *)tableView didLongPressRowAtIndexPath:(NSIndexPath *)indexPath {
+    //
+    NSLog(@"longPressed.");
+}
+*/
 @end

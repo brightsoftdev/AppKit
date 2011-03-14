@@ -163,7 +163,7 @@
         //[self.navigationController setToolbarHidden:NO animated:NO];
         
         //self.navigationController.toolbarHidden = NO;
-        
+
         _backButton = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"]
                                                         style:UIBarButtonItemStylePlain 
                                                        target:self
@@ -189,7 +189,7 @@
                                                                            action:@selector(otherAction:)] autorelease],
                             [self flexibleSpace],
                             nil];
-        
+
         self.toolbarItems = _webToolbarItems;
         
     }

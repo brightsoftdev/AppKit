@@ -26,6 +26,13 @@
     self.view = v;
 }
 
+- (void)dealloc {
+    RELEASE(_overlayView)
+    [super dealloc];
+}
+
+// need to release overlayview !
+
 - (void)setOverlayView:(UIView *)value {
     if (value) {
         value.frame = self.view.frame;

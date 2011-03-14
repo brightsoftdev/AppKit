@@ -12,5 +12,8 @@
 @interface AKTableViewDelegate : NSObject <UITableViewDelegate> {
 
 }
-
+/*
+- (void)tableView:(UITableView *)tableView didLongPressRowAtIndexPath:(NSIndexPath *)indexPath
+                                                withGestureRecognizer:(UILongPressGestureRecognizer *)gestureRecognizer;
+*/
 @end

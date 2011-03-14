@@ -29,6 +29,7 @@
 
 // WebController
 #import "AKWebController.h"
+#import "AKWebAppController.h"
 
 // MapController
 #import "AKMapController.h"

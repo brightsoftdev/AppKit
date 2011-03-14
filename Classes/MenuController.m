@@ -17,7 +17,7 @@
 #pragma mark actions
 
 - (void)webControllerAction:(id)sender {
-    [[[[AKWebController alloc] initWithURL:@"http://www.google.com/"] autorelease] push];
+    [[[[AKWebController alloc] initWithInitialURL:@"http://www.google.com/"] autorelease] push];
 }
 
 - (void)mapControllerAction:(id)sender {
@@ -86,7 +86,7 @@
                          [AKTableTextObject itemWithText:@"AKMapController" delegate:self selector:@selector(mapControllerAction:)],
                          nil],
                         
-                        [[[AKTableColumnObject alloc] init] autorelease],
+                        //[[[AKTableColumnObject alloc] init] autorelease],
 
                         [NSArray arrayWithObjects:
                          [AKTableTextObject itemWithText:@"Twitter Sample" delegate:self selector:@selector(twitterAction:)],

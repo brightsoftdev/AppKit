@@ -22,8 +22,8 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    UIControl *control = self.object;
-    control.frame = self.contentView.frame;
+    //UIControl *control = self.object;
+    //control.frame = self.contentView.frame;
 }
 
 @end

@@ -13,6 +13,7 @@
 #import "TwitterController.h"
 
 #import "AKWebController.h"
+#import "AKWebAppController.h"
 
 @implementation AppKitAppDelegate
 
@@ -21,7 +22,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
-    [MenuController push];
+    //[MenuController push];
+    //[AKWebAppController push];
+    [[[[AKWebAppController alloc] initWithInitialURL:@"http://localhost/SchoolApp/public_html/"] autorelease] push];
 
     return YES;
 }

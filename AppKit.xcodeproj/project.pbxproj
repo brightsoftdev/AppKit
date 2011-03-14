@@ -96,6 +96,8 @@
 		68D3815B13237BFE00A0682B /* AKTableColumnObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D3815913237BFE00A0682B /* AKTableColumnObject.m */; };
 		68D3815E13237C3600A0682B /* AKTableColumnCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 68D3815C13237C3600A0682B /* AKTableColumnCell.h */; };
 		68D3815F13237C3600A0682B /* AKTableColumnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D3815D13237C3600A0682B /* AKTableColumnCell.m */; };
+		68E615641328D29C00CA6CD1 /* AKWebAppController.h in Headers */ = {isa = PBXBuildFile; fileRef = 68E615621328D29C00CA6CD1 /* AKWebAppController.h */; };
+		68E615651328D29C00CA6CD1 /* AKWebAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E615631328D29C00CA6CD1 /* AKWebAppController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +211,8 @@
 		68D3815913237BFE00A0682B /* AKTableColumnObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKTableColumnObject.m; path = AppKit/AKTableColumnObject.m; sourceTree = SOURCE_ROOT; };
 		68D3815C13237C3600A0682B /* AKTableColumnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKTableColumnCell.h; path = AppKit/AKTableColumnCell.h; sourceTree = SOURCE_ROOT; };
 		68D3815D13237C3600A0682B /* AKTableColumnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKTableColumnCell.m; path = AppKit/AKTableColumnCell.m; sourceTree = SOURCE_ROOT; };
+		68E615621328D29C00CA6CD1 /* AKWebAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKWebAppController.h; path = AppKit/AKWebAppController.h; sourceTree = SOURCE_ROOT; };
+		68E615631328D29C00CA6CD1 /* AKWebAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKWebAppController.m; path = AppKit/AKWebAppController.m; sourceTree = SOURCE_ROOT; };
 		68EFF051130C0EC70028B681 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* AppKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AppKit-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -312,8 +316,8 @@
 				685F573C130A8F8B00AE3D4E /* Model */,
 				68F31DD012F70473004ADFF7 /* Image */,
 				685F5623130A7B6B00AE3D4E /* Views */,
-				68ED551612F3FA3A00F234B0 /* ViewController */,
 				68A7F0F2131584ED0068AC1C /* WebController */,
+				68E615611328D23700CA6CD1 /* WebAppController */,
 				68D380C41323033500A0682B /* MapController */,
 				6857F9B41303AD0C004B6549 /* Navigation */,
 				68F31D8112F7028A004ADFF7 /* Network */,
@@ -411,6 +415,7 @@
 		685F5623130A7B6B00AE3D4E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				68ED551612F3FA3A00F234B0 /* ViewController */,
 				685F5668130A7FC200AE3D4E /* AKLoadingLabel.h */,
 				685F5669130A7FC200AE3D4E /* AKLoadingLabel.m */,
 				685F5624130A7B8C00AE3D4E /* AKLoadingView.h */,
@@ -498,6 +503,15 @@
 				68D3815D13237C3600A0682B /* AKTableColumnCell.m */,
 			);
 			name = Column;
+			sourceTree = "<group>";
+		};
+		68E615611328D23700CA6CD1 /* WebAppController */ = {
+			isa = PBXGroup;
+			children = (
+				68E615621328D29C00CA6CD1 /* AKWebAppController.h */,
+				68E615631328D29C00CA6CD1 /* AKWebAppController.m */,
+			);
+			name = WebAppController;
 			sourceTree = "<group>";
 		};
 		68E6DADB131E411500A27AA8 /* Resource */ = {
@@ -639,6 +653,7 @@
 				68D380C81323035800A0682B /* AKMapController.h in Headers */,
 				68D3815A13237BFE00A0682B /* AKTableColumnObject.h in Headers */,
 				68D3815E13237C3600A0682B /* AKTableColumnCell.h in Headers */,
+				68E615641328D29C00CA6CD1 /* AKWebAppController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,6 +788,7 @@
 				68D380E61323042300A0682B /* AKMapController.m in Sources */,
 				68D3815B13237BFE00A0682B /* AKTableColumnObject.m in Sources */,
 				68D3815F13237C3600A0682B /* AKTableColumnCell.m in Sources */,
+				68E615651328D29C00CA6CD1 /* AKWebAppController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

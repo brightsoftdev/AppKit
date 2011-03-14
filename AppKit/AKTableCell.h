@@ -9,12 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@class AKTableObject;
 @interface AKTableCell : UITableViewCell {
-    id _object;
+    AKTableObject *_object;
     BOOL _enabled;
+    
+    NSUInteger _ignoreCounter;
+    UILongPressGestureRecognizer *_gestureRecognizer;
 }
 
-@property (nonatomic, retain) id object;
+@property (nonatomic, retain) AKTableObject *object;
 @property (nonatomic, assign) BOOL enabled;
 
 @end

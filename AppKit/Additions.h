@@ -38,3 +38,7 @@
 - (void)performSelectorOnObjects:(SEL)selector withObject:(id)object;
 - (void)performSelectorOnObjects:(SEL)selector withObject:(id)object withObject:(id)object2;
 @end
+
+@interface NSURL (Additions)
+- (NSDictionary *)parameters;
+@end

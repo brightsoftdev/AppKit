@@ -17,7 +17,7 @@
     NSMutableArray *_dynamicToolbarItems;
     UIBarButtonItem *_backButton;
     UIBarButtonItem *_forwardButton;
-    
+
     NSMutableArray *_webToolbarItems;
 }
 
