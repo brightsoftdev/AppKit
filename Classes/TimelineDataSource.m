@@ -12,7 +12,7 @@
 @implementation TimelineDataSource
 
 - (id)init {
-    if (self = [super init]) {
+    if ((self = [super init])) {
         _publicTimelineModel = [[PublicTimelineModel alloc] init];
         /*
         self.items = [NSArray arrayWithObjects:

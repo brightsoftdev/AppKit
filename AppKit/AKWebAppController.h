@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AKBaseViewController.h"
 
-@interface AKWebAppController : AKBaseViewController <UIWebViewDelegate, UIActionSheetDelegate> {
+@interface AKWebAppController : AKBaseViewController <UIWebViewDelegate> {
     NSString *_initialURL;
     /*
     UIBarButtonItem *_backButton;

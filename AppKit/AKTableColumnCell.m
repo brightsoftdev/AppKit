@@ -12,7 +12,7 @@
 @implementation AKTableColumnCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])) {
 
         _cell1 = [[UITableViewCell alloc] initWithStyle:style reuseIdentifier:@"Cell1"];
         //_cell1.backgroundColor = [UIColor redColor];

@@ -14,7 +14,7 @@
 @synthesize delegates = _delegates;
 
 - (id)init {
-    if (self = [super init]) {
+    if ((self = [super init])) {
         _delegates = [[NSMutableSet alloc] init];
     }
     return self;

@@ -90,6 +90,8 @@
 		68A1582C132233C800A02939 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68A1582B132233C800A02939 /* Localizable.strings */; };
 		68A7F0F51315851B0068AC1C /* AKWebController.h in Headers */ = {isa = PBXBuildFile; fileRef = 68A7F0F31315851B0068AC1C /* AKWebController.h */; };
 		68A7F0F61315851B0068AC1C /* AKWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A7F0F41315851B0068AC1C /* AKWebController.m */; };
+		68B2AA311331B9DD0025B443 /* AKWebAppControllerMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 68B2AA2F1331B9DD0025B443 /* AKWebAppControllerMethods.h */; };
+		68B2AA321331B9DD0025B443 /* AKWebAppControllerMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B2AA301331B9DD0025B443 /* AKWebAppControllerMethods.m */; };
 		68D380C81323035800A0682B /* AKMapController.h in Headers */ = {isa = PBXBuildFile; fileRef = 68D380C61323035800A0682B /* AKMapController.h */; };
 		68D380E61323042300A0682B /* AKMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D380C71323035800A0682B /* AKMapController.m */; };
 		68D3815A13237BFE00A0682B /* AKTableColumnObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 68D3815813237BFE00A0682B /* AKTableColumnObject.h */; };
@@ -205,6 +207,8 @@
 		68A1582D132233CE00A02939 /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Japanese; path = Japanese.lproj/Localizable.strings; sourceTree = "<group>"; };
 		68A7F0F31315851B0068AC1C /* AKWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKWebController.h; path = AppKit/AKWebController.h; sourceTree = SOURCE_ROOT; };
 		68A7F0F41315851B0068AC1C /* AKWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKWebController.m; path = AppKit/AKWebController.m; sourceTree = SOURCE_ROOT; };
+		68B2AA2F1331B9DD0025B443 /* AKWebAppControllerMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKWebAppControllerMethods.h; path = AppKit/AKWebAppControllerMethods.h; sourceTree = SOURCE_ROOT; };
+		68B2AA301331B9DD0025B443 /* AKWebAppControllerMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKWebAppControllerMethods.m; path = AppKit/AKWebAppControllerMethods.m; sourceTree = SOURCE_ROOT; };
 		68D380C61323035800A0682B /* AKMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMapController.h; path = AppKit/AKMapController.h; sourceTree = SOURCE_ROOT; };
 		68D380C71323035800A0682B /* AKMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMapController.m; path = AppKit/AKMapController.m; sourceTree = SOURCE_ROOT; };
 		68D3815813237BFE00A0682B /* AKTableColumnObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKTableColumnObject.h; path = AppKit/AKTableColumnObject.h; sourceTree = SOURCE_ROOT; };
@@ -510,6 +514,8 @@
 			children = (
 				68E615621328D29C00CA6CD1 /* AKWebAppController.h */,
 				68E615631328D29C00CA6CD1 /* AKWebAppController.m */,
+				68B2AA2F1331B9DD0025B443 /* AKWebAppControllerMethods.h */,
+				68B2AA301331B9DD0025B443 /* AKWebAppControllerMethods.m */,
 			);
 			name = WebAppController;
 			sourceTree = "<group>";
@@ -654,6 +660,7 @@
 				68D3815A13237BFE00A0682B /* AKTableColumnObject.h in Headers */,
 				68D3815E13237C3600A0682B /* AKTableColumnCell.h in Headers */,
 				68E615641328D29C00CA6CD1 /* AKWebAppController.h in Headers */,
+				68B2AA311331B9DD0025B443 /* AKWebAppControllerMethods.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,6 +796,7 @@
 				68D3815B13237BFE00A0682B /* AKTableColumnObject.m in Sources */,
 				68D3815F13237C3600A0682B /* AKTableColumnCell.m in Sources */,
 				68E615651328D29C00CA6CD1 /* AKWebAppController.m in Sources */,
+				68B2AA321331B9DD0025B443 /* AKWebAppControllerMethods.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,6 +834,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AppKit_Prefix.pch;
 				INFOPLIST_FILE = "AppKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -844,6 +853,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AppKit_Prefix.pch;
 				INFOPLIST_FILE = "AppKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -887,6 +897,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hiroshi Horie (QEXMCG3656)";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
@@ -901,6 +912,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hiroshi Horie (QEXMCG3656)";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";

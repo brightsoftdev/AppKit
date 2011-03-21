@@ -47,7 +47,7 @@
 #pragma mark controller
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nil bundle:nil]) {
+    if ((self = [super initWithNibName:nil bundle:nil])) {
         self.title = @"AppKit Sample App";
         self.style = UITableViewStyleGrouped;
         

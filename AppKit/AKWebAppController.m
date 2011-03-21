@@ -30,11 +30,7 @@
 #pragma mark -
 #pragma mark delegates
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    //NSString *script = (NSString *)actionSheet.tag;
-    NSString *script = [NSString stringWithFormat:@"actionSheet_clickedButtonAtIndex(%d);", buttonIndex];
-    [_webView stringByEvaluatingJavaScriptFromString:script]; 
-}
+
 
 // --------------------------------------------------
 
@@ -125,57 +121,6 @@
 
 // --------------------------------------------------
 
-- (void)actionSheet {
-    UIActionSheet *actionSheet = [[[UIActionSheet alloc] initWithTitle:nil
-                                                              delegate:self
-                                                     cancelButtonTitle:@"Cancel"
-                                                destructiveButtonTitle:nil
-                                                     otherButtonTitles:@"Test", nil] autorelease];
-    
-    
-    [actionSheet showInView:[AKNavigationController shared].window];
-}
-
-- (void)showActionSheet:(NSString *)title
-      cancelButtonTitle:(NSString *)cancelButtonTitle
- destructiveButtonTitle:(NSString *)destructiveButtonTitle
-  withOtherButtonTitles:(NSArray *)otherButtonTitles {
-
-    NSLog(@"title : %@, otherButtonTitles : %@", title, NSStringFromClass([otherButtonTitles class]));
-
-    UIActionSheet *actionSheet = [[[UIActionSheet alloc] init] autorelease];
-    actionSheet.delegate = self;
-    NSString *someString = @"This is some string";
-
-    actionSheet.tag = (NSUInteger)someString;
-    NSLog(@"some string : %@", (NSString *)actionSheet.tag);
-
-    /*
-    [actionSheet setValue:@"SomeValue" forUndefinedKey:@"SomeKey"];
-    
-    NSLog(@"actionSheet : %@", [actionSheet valueForUndefinedKey:@"SomeKey"]);
-    */
-
-    if ([title isKindOfClass:[NSString class]]) actionSheet.title = title;
-
-    for (NSString *otherButtonTitle in otherButtonTitles) {
-        [actionSheet addButtonWithTitle:otherButtonTitle];
-    }
-    
-    if (cancelButtonTitle) {
-        [actionSheet addButtonWithTitle:cancelButtonTitle];
-        [actionSheet setCancelButtonIndex:[actionSheet numberOfButtons] - 1];
-    }
-
-    [actionSheet showInView:[AKNavigationController shared].window];
-}
-
-- (void)showAlertWithMessage:(NSString *)message {
-    [UIAlertView showAlertWithMessage:message];
-}
-
-// --------------------------------------------------
-
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     //NSLog(@"shouldStartLoad : %@", request);
 /*
@@ -188,12 +133,6 @@
  */
     NSURL *url = request.URL;
 
-    //NSLog(@"url : %@", [url baseURL]);
-    /*
-    NSURL *someURL = [NSURL URLWithString:@"./?zombie" relativeToURL:[NSURL URLWithString:@"http://www.google.com/?omega"]];
-    NSLog(@"someURL : %@", [someURL absoluteString]);
-    */
-    
     NSLog(@"shouldStartLoadWithRequest : %@, parameters : %@", [url absoluteString], [url parameters]);
 /*
     if (navigationType == UIWebViewNavigationTypeLinkClicked) {
@@ -260,7 +199,7 @@
 // --------------------------------------------------
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         self.title = LOCSTR(@"Loading...");
 
         _refreshButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
@@ -307,7 +246,7 @@
 // --------------------------------------------------
 
 - (id)initWithInitialURL:(NSString *)initialURL {
-    if (self = [self initWithNibName:nil bundle:nil]) {
+    if ((self = [self initWithNibName:nil bundle:nil])) {
         self.initialURL = initialURL;
     }
     return self;

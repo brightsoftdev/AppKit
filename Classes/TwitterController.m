@@ -14,7 +14,7 @@
 @implementation TwitterController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         self.title = @"Twitter Sample";
         //self.style = UITableViewStyleGrouped;
         self.dataSource = [[[TimelineDataSource alloc] init] autorelease];

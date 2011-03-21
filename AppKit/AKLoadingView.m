@@ -12,7 +12,7 @@
 @implementation AKLoadingView
 
 - (id)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
+    if ((self = [super initWithFrame:frame])) {
         self.backgroundColor = [UIColor whiteColor];
 
         _loadingLabel = [[[AKLoadingLabel alloc] initWithFrame:CGRectZero] autorelease];

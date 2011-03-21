@@ -128,7 +128,7 @@
 #pragma mark controller
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
 /*
         _backButton = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"]
                                                         style:UIBarButtonItemStylePlain 
@@ -199,7 +199,7 @@
 // --------------------------------------------------
 
 - (id)initWithURL:(NSString *)URL {
-    if (self = [self initWithNibName:nil bundle:nil]) {
+    if ((self = [self initWithNibName:nil bundle:nil])) {
         self.initialURL = URL;
     }
     return self;

@@ -26,6 +26,7 @@
     //[AKWebAppController push];
     [[[[AKWebAppController alloc] initWithInitialURL:@"http://localhost/SchoolApp/public_html/"] autorelease] push];
 
+    //にほんご？
     return YES;
 }
 

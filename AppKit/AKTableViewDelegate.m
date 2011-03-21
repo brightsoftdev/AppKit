@@ -13,7 +13,7 @@
 @implementation AKTableViewDelegate
 
 - (id)init {
-    if (self = [super init]) {
+    if ((self = [super init])) {
         //
         NSLog(@"delegate init");
     }

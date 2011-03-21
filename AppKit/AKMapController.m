@@ -13,7 +13,7 @@
 @synthesize mapView = _mapView;
 
 - (id)inlllitWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         //
         //self.hidesBottomBarWhenPushed = YES;
     }

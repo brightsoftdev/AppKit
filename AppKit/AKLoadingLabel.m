@@ -14,7 +14,7 @@ static const float kSpacing = 8.0;
 @implementation AKLoadingLabel
 
 - (id)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
+    if ((self = [super initWithFrame:frame])) {
         _label = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
         [self addSubview:_label];
 

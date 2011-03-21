@@ -13,7 +13,7 @@
 @synthesize tweets = _tweets;
 
 - (id)init {
-    if (self = [super init]) {
+    if ((self = [super init])) {
         _tweets = [[NSMutableArray alloc] init];
     }
     return self;
