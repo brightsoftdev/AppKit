@@ -17,7 +17,7 @@
 #pragma mark actions
 
 - (void)webControllerAction:(id)sender {
-    [[[[AKWebController alloc] initWithInitialURL:@"http://www.google.com/"] autorelease] push];
+    [[[[AKWebController alloc] initWithURL:@"http://www.google.com/"] autorelease] push];
 }
 
 - (void)mapControllerAction:(id)sender {
