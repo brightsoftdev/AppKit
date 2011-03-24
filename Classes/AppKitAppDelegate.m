@@ -22,11 +22,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
-    [MenuController push];
+    //[MenuController push];
     //[AKWebAppController push];
-    //[[[[AKWebAppController alloc] initWithInitialURL:@"http://localhost/SchoolApp/public_html/"] autorelease] push];
+    [[[[AKWebAppController alloc] initWithInitialURL:@"http://localhost/SchoolApp/public_html/"] autorelease] push];
 
-    //にほんご？
     return YES;
 }
 
